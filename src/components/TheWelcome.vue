@@ -23,13 +23,18 @@ import WelcomeItem from './WelcomeItem.vue'
     </template>
     <template #heading>Tool Box</template>
 
-    My primary tools are Vue, Angular, and React. I also have experience with
-    Node.js, Express, MongoDB, and PostgreSQL. I'm currently learning Python and
-    Django.
-
+    My primary tools are
+    <span class="emphasis"
+      >Angular, Vue, vanilla JS, Typescript, HTML, CSS, Node.js, Git, Express,
+      Multer</span
+    >
+    and <span class="emphasis">Firebase</span>. I also have experience with
+    <span class="emphasis"
+      >ChatGPT API, Python, Beautiful Soup, PHP, PostgreSQL, AWS, CircleCI,
+      Sharp.js</span
+    >
+    and <span class="emphasis">Ffmpeg</span>.
     <br />
-
-    More instructions are available in <code>README.md</code>.
   </WelcomeItem>
 
   <WelcomeItem>
@@ -38,24 +43,31 @@ import WelcomeItem from './WelcomeItem.vue'
     </template>
     <template #heading>Certifications</template>
 
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener"
-      >Vue Router</a
-    >,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener"
-      >Vue Test Utils</a
-    >, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener"
-      >Vue Dev Tools</a
-    >. If you need more resources, we suggest paying
+    My certifications include:
     <a
-      href="https://github.com/vuejs/awesome-vue"
+      href="https://www.udacity.com/certificate/NEKGL27E"
       target="_blank"
       rel="noopener"
-      >Awesome Vue</a
-    >
-    a visit.
+      >Intro to Programming</a
+    >,
+    <a
+      href="https://confirm.udacity.com/6YPHMFLX"
+      target="_blank"
+      rel="noopener"
+      >Intermediate Javascript</a
+    >,
+    <a
+      href="https://confirm.udacity.com/ECGAWQ4L"
+      target="_blank"
+      rel="noopener"
+      >Front End Web Developer</a
+    >, and
+    <a
+      href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f"
+      target="_blank"
+      rel="noopener"
+      >Full Stack Javascript Developer</a
+    >.
   </WelcomeItem>
 
   <WelcomeItem>
@@ -64,23 +76,13 @@ import WelcomeItem from './WelcomeItem.vue'
     </template>
     <template #heading>Project Portfolio</template>
 
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a
-    >, our official Discord server, or
-    <a
-      href="https://stackoverflow.com/questions/tagged/vue.js"
-      target="_blank"
-      rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener"
-      >our mailing list</a
-    >
-    and follow the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-      >@vuejs</a
-    >
-    twitter account for latest news in the Vue world.
+    My projects include:
+    <a href="https://floodeditions.com/" target="_blank" rel="noopener"
+      >Fullstack Website Build</a
+    >,
+    <a href="https://betterbanjopractice.com/" target="_blank" rel="noopener"
+      >Musician's Practice Optimizer</a
+    >,
   </WelcomeItem>
 
   <WelcomeItem>

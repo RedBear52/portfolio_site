@@ -19,7 +19,7 @@ const showImage = ref(false)
         width="225px"
       />
       <img
-        v-if="showImage"
+        v-show="showImage"
         class="logo-hovered"
         src="./assets/ryan_head.jpg"
         alt="photo image of ryan spearman"
@@ -48,6 +48,9 @@ header {
 
 .logo-container {
   position: relative;
+  width: 225px;
+  height: 410px;
+  margin-right: 2rem;
 }
 
 .logo {
@@ -61,7 +64,13 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
   z-index: 1;
+}
+
+.logo-container:hover .logo-hovered {
+  opacity: 1;
 }
 
 nav {
@@ -117,9 +126,26 @@ nav a:first-of-type {
 }
 
 @media (min-width: 598px) and (max-width: 1023px) {
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  /* .logo {
+    border-bottom: 2px solid var(--color-primary);
+  } */
+}
+
+@media (max-width: 597px) {
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
   .logo {
-    /* border: 3px solid var(--color-primary); */
-    display: none;
+    border-bottom: 2px solid var(--color-primary);
   }
 }
 </style>

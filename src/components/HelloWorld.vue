@@ -11,7 +11,7 @@ defineProps({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      An autodidactic web/software developer using tech to solve problems.
+      An autodidactic web/software developer using tech to tackle problems.
       <br /><br />
       <a href="https://floodeditions.com/" target="_blank" rel="noopener"
         >Fullstack Website Build
