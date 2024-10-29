@@ -18,6 +18,7 @@
   margin: 0 auto;
   max-width: 500px;
   padding: 2rem;
+  text-align: center;
 }
 
 h1 {

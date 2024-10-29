@@ -10,21 +10,31 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
+    <div class="icon-container">
+      <a
+        href="https://github.com/RedBear52?tab=repositories"
+        target="_blank"
+        rel="noopener"
+        ><i class="pi pi-github"></i
+      ></a>
+      <br />
+      <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
+        ><i class="pi pi-globe"></i
+      ></a>
+    </div>
     <h3>
       An autodidactic web/software developer using tech to tackle problems.
       <br /><br />
-      <a href="https://floodeditions.com/" target="_blank" rel="noopener"
-        >Fullstack Website Build
-      </a>
-      <br />
-      <a href="https://betterbanjopractice.com/" target="_blank" rel="noopener"
-        >Musician's Practice Optimizer</a
-      >
     </h3>
   </div>
 </template>
 
 <style scoped>
+.icon-container {
+  display: flex;
+  flex-direction: row;
+}
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
@@ -45,6 +55,20 @@ h3 {
   .greetings h1,
   .greetings h3 {
     text-align: left;
+  }
+}
+
+@media (min-width: 598px) and (max-width: 1024px) {
+  .icon-container {
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 597px) {
+  .icon-container {
+    justify-content: center;
+    font-size: 1.2.5rem;
   }
 }
 </style>

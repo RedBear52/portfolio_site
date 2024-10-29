@@ -1,16 +1,43 @@
 <template>
   <div class="item">
-    <i>
+    <i @mouseover="headingColorPrimary" @mouseleave="headingColorSecondary">
       <slot name="icon"></slot>
     </i>
     <div class="details">
-      <h3>
+      <h3
+        :style="{
+          color: headingColor,
+          textDecoration: textDecoration,
+          textDecorationColor,
+        }"
+      >
         <slot name="heading"></slot>
       </h3>
       <slot></slot>
     </div>
+    <theFooter />
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const headingColor = ref('var(--color-heading)')
+
+const textDecoration = ref('none')
+
+const textDecorationColor = ref('var(--color-primary)')
+
+const headingColorPrimary = () => {
+  headingColor.value = 'var(--color-primary)'
+  textDecoration.value = 'underline'
+}
+
+const headingColorSecondary = () => {
+  headingColor.value = 'var(--color-heading)'
+  textDecoration.value = 'none'
+}
+</script>
 
 <style scoped>
 .item {
@@ -30,7 +57,12 @@ i {
   place-content: center;
   width: 32px;
   height: 32px;
-  color: var(--color-text);
+  color: var(--color-primary);
+}
+
+i:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
 h3 {

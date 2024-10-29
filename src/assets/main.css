@@ -2,8 +2,8 @@
 
 @import 'primeicons/primeicons.css';
 
-:root {
-  --color-primary: hsl(199, 86%, 42%);
+img {
+  border-radius: 4px;
 }
 
 #app {
@@ -13,18 +13,19 @@
   font-weight: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  /* color: hsla(160, 100%, 37%, 1); */
+a {
   color: var(--color-primary);
-  transition: 0.4s;
-  padding: 3px;
+  text-decoration: none;
+}
+
+a .pi {
+  margin-right: 0.5rem;
+  color: var(--color-primary);
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    /* color: var(--color-border-hover); */
   }
 }
 

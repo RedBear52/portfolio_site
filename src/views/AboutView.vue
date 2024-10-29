@@ -1,15 +1,48 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about-container">
+    <h1>Howdy!</h1>
+    <br />
+    <p>
+      A few years ago, I started learning to code. This exploration opened up an
+      entirely new universe of practical & creative expression in my life.
+    </p>
+    <br />
+    <p>
+      For 25 years I've worked as an independent music professional (recording
+      artist, performer, instructor, promoter, writer and radio DJ). This
+      experience taught me a lot about communication, connection and the dogged
+      persistence required to turn ideas into living/breathing things.
+    </p>
+    <br />
+    <p>
+      Outside of work and tech, I'm a volunteer youth wrestling coach who likes
+      to camp, kayak, cycle and grapple.
+    </p>
+    <br />
+    <p>
+      I live to learn through play and I love to build clean/functional apps
+      that feel good to use.
+    </p>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+.about-container {
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.6rem;
+  /* margin-bottom: 1rem; */
+}
+
+@media (min-width: 397px) {
+  .about-container {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
 </style>

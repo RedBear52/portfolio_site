@@ -1,11 +1,6 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import { ref } from 'vue'
-
-const showImage = ref(false)
-</script>
-
 <template>
+  <AppFooter />
+
   <header>
     <div
       class="logo-container"
@@ -15,11 +10,11 @@ const showImage = ref(false)
       <img
         alt="coder logo"
         class="logo"
-        src="@/assets/tarot_coder.png"
+        src="@/assets/glowing_tarot_coder.webp"
         width="225px"
       />
       <img
-        v-show="showImage"
+        v-if="showImage"
         class="logo-hovered"
         src="./assets/ryan_head.jpg"
         alt="photo image of ryan spearman"
@@ -30,15 +25,23 @@ const showImage = ref(false)
       <HelloWorld msg="Ryan Spearman" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink to="/" class="router-link">Home</RouterLink>
+        <RouterLink to="/about" class="router-link">About</RouterLink>
+        <RouterLink to="/contact" class="router-link">Connect</RouterLink>
       </nav>
     </div>
   </header>
 
   <RouterView />
 </template>
+
+<script setup>
+import HelloWorld from './components/HelloWorld.vue'
+import AppFooter from './components/AppFooter.vue'
+import { ref } from 'vue'
+
+const showImage = ref(false)
+</script>
 
 <style scoped>
 header {
@@ -55,6 +58,7 @@ header {
 
 .logo {
   display: block;
+  border-radius: 8px;
 }
 
 .logo-hovered {
@@ -65,19 +69,17 @@ header {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
   z-index: 1;
 }
 
-.logo-container:hover .logo-hovered {
-  opacity: 1;
+.logo-hovered {
+  opacity: 0.9;
 }
 
 nav {
   width: 100%;
-  font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 nav a.router-link-exact-active {
@@ -96,6 +98,10 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+.router-link {
+  font-size: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -118,10 +124,10 @@ nav a:first-of-type {
   nav {
     text-align: left;
     margin-left: -1rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
+    margin-top: 0;
   }
 }
 
@@ -132,9 +138,10 @@ nav a:first-of-type {
     margin: auto;
   }
 
-  /* .logo {
-    border-bottom: 2px solid var(--color-primary);
-  } */
+  nav {
+    font-size: 1.25rem;
+    margin-top: none;
+  }
 }
 
 @media (max-width: 597px) {
@@ -146,6 +153,11 @@ nav a:first-of-type {
 
   .logo {
     border-bottom: 2px solid var(--color-primary);
+  }
+
+  nav {
+    margin-top: none;
+    font-size: 1.25rem;
   }
 }
 </style>
