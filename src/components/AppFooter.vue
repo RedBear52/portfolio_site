@@ -35,41 +35,54 @@ const techTools = [
   background-color: var(--color-background);
   padding: 1rem 0;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  bottom: 0;
   text-align: center;
   color: var(--color-primary);
-  margin: 0;
 }
 
 .tech-logos {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .footer img {
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 2.25;
+  max-height: 2.25rem;
 }
 
 @media (min-width: 598px) and (max-width: 1023px) {
+  .footer {
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .footer img {
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+
   .tech-logos {
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 597px) {
+  .footer {
+    position: relative;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
   .tech-logos {
     flex-wrap: wrap;
   }
 
   .footer img {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 2rem;
+    max-height: 2rem;
   }
 }
 </style>

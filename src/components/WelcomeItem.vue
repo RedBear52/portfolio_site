@@ -1,6 +1,10 @@
 <template>
   <div class="item">
-    <i @mouseover="headingColorPrimary" @mouseleave="headingColorSecondary">
+    <i
+      @click="handleIconClick"
+      @mouseover="headingColorPrimary"
+      @mouseleave="headingColorSecondary"
+    >
       <slot name="icon"></slot>
     </i>
     <div class="details">
@@ -15,17 +19,19 @@
       </h3>
       <slot></slot>
     </div>
-    <theFooter />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
+const emit = defineEmits(['icon-click'])
+const handleIconClick = () => {
+  emit('icon-click')
+}
+
 const headingColor = ref('var(--color-heading)')
-
 const textDecoration = ref('none')
-
 const textDecorationColor = ref('var(--color-primary)')
 
 const headingColorPrimary = () => {
