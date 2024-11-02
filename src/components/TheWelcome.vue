@@ -219,18 +219,24 @@ const showModal = content => {
   color: white;
 }
 
-.modal .emphasis,
-h2 {
-  font-weight: bold;
-  color: var(--color-background);
-}
-
 .modal .header-text {
-  color: var(--color-background);
+  color: var(--color-primary);
 }
 
 .modal a {
-  color: var(--color-background);
+  color: var(--color-text);
+}
+
+.modal-content {
+  border: 1px solid red;
+}
+
+.modal .emphasis {
+  color: var(--color-text);
+}
+
+.modal a .emphasis {
+  color: var(--color-text);
 }
 
 .modal a:hover {

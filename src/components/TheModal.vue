@@ -30,19 +30,21 @@ const closeModal = () => {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(123, 231, 312, 0.4); */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .modal-content {
-  background: white;
-  color: black;
+  background: var(--color-background);
+  color: var(--color-text);
   font-size: 2.5rem;
   padding: 2rem;
   border-radius: 8px;
   position: relative;
   width: 70%;
+  border: 1px solid var(--color-primary);
 }
 
 .close-button {
