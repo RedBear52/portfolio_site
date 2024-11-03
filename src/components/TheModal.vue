@@ -30,7 +30,6 @@ const closeModal = () => {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  /* background: rgba(123, 231, 312, 0.4); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,9 +54,11 @@ const closeModal = () => {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: var(--color-primary);
 }
 
 /* transition CSS */
+
 .v-enter-active,
 .v-leave-active {
   transition:

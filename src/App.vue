@@ -1,43 +1,52 @@
 <template>
+  <div>
+    <header>
+      <div
+        class="logo-container"
+        @mouseover="showImage = true"
+        @mouseleave="showImage = false"
+      >
+        <img
+          alt="coder logo"
+          class="logo"
+          src="@/assets/glowing_tarot_coder.webp"
+          width="225px"
+        />
+        <Transition>
+          <img
+            v-if="showImage"
+            class="logo-hovered"
+            src="./assets/ryan_head.jpg"
+            alt="photo image of ryan spearman"
+          />
+        </Transition>
+      </div>
+
+      <div class="wrapper">
+        <HelloWorld msg="Ryan Spearman" />
+
+        <nav>
+          <RouterLink to="/" class="router-link">Home</RouterLink>
+          <RouterLink to="/about" class="router-link">About</RouterLink>
+          <RouterLink to="/contact" class="router-link">Connect</RouterLink>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
+  </div>
   <AppFooter />
-
-  <header>
-    <div
-      class="logo-container"
-      @mouseover="showImage = true"
-      @mouseleave="showImage = false"
-    >
-      <img
-        alt="coder logo"
-        class="logo"
-        src="@/assets/glowing_tarot_coder.webp"
-        width="225px"
-      />
-      <img
-        v-if="showImage"
-        class="logo-hovered"
-        src="./assets/ryan_head.jpg"
-        alt="photo image of ryan spearman"
-      />
-    </div>
-
-    <div class="wrapper">
-      <HelloWorld msg="Ryan Spearman" />
-
-      <nav>
-        <RouterLink to="/" class="router-link">Home</RouterLink>
-        <RouterLink to="/about" class="router-link">About</RouterLink>
-        <RouterLink to="/contact" class="router-link">Connect</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
 </template>
 
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import AppFooter from './components/AppFooter.vue'
+import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 
 const showImage = ref(false)
@@ -47,6 +56,10 @@ const showImage = ref(false)
 header {
   line-height: 1.5;
   max-height: 100vh;
+}
+
+.footer {
+  margin-top: 3rem;
 }
 
 .logo-container {
@@ -59,6 +72,13 @@ header {
 .logo {
   display: block;
   border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.logo-container:hover .logo {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 
 .logo-hovered {
@@ -104,6 +124,21 @@ nav a:first-of-type {
   font-size: 1rem;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    opacity 0.3s ease,
+    transform 0.1s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(5px);
+}
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -136,6 +171,15 @@ nav a:first-of-type {
     display: flex;
     align-items: center;
     margin: auto;
+  }
+
+  .footer {
+    position: relative;
+  }
+
+  .footer img {
+    max-width: 20px;
+    max-height: 20px;
   }
 
   nav {

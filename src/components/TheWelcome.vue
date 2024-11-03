@@ -227,10 +227,6 @@ const showModal = content => {
   color: var(--color-text);
 }
 
-.modal-content {
-  border: 1px solid red;
-}
-
 .modal .emphasis {
   color: var(--color-text);
 }
