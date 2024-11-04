@@ -24,6 +24,9 @@
 <script setup>
 import { ref } from 'vue'
 import emailjs from 'emailjs-com'
+import { useToast } from 'vue-toastification'
+
+const toast = useToast()
 
 const name = ref('')
 const email = ref('')
@@ -34,7 +37,7 @@ const VITE_TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID
 const VITE_PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY
 
 const sendEmail = async e => {
-  e.preventDefault() // Ensure the default form submission is prevented
+  e.preventDefault()
   try {
     await emailjs.sendForm(
       VITE_SERVICE_ID,
@@ -47,10 +50,12 @@ const sendEmail = async e => {
         message: message.value,
       },
     )
-    console.log(name.value, email.value, message.value) // Log the values to verify
-    e.target.reset() // Reset the form
+    console.log(name.value, email.value, message.value)
+    toast.success('Message sent successfully!')
+    e.target.reset()
   } catch (error) {
     console.log({ error })
+    toast.error('An error occurred. Please try again later.')
   }
 }
 </script>

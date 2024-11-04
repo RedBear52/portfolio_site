@@ -6,6 +6,13 @@
   border: 1px solid red;
 } */
 
+/* Toast Styles */
+.toast-style {
+  background-color: var(--color-background) !important;
+  border: 1px solid var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
 img {
   border-radius: 4px;
 }

@@ -38,8 +38,8 @@ const closeModal = () => {
 .modal-content {
   background: var(--color-background);
   color: var(--color-text);
-  font-size: 2.5rem;
-  padding: 2rem;
+  font-size: 1.75rem;
+  padding: 0 2rem 2rem 2rem;
   border-radius: 8px;
   position: relative;
   width: 70%;

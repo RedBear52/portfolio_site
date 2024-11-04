@@ -19,7 +19,7 @@
 
     My primary tools are
     <span class="emphasis"
-      >Angular, Vue, vanilla JS, Typescript, HTML, CSS, Node, Git, Express</span
+      >Angular, Vue, Javascript, Typescript, HTML, CSS, Node, Git, Express</span
     >
     and <span class="emphasis">Firebase</span>. I also have experience with
     <span class="emphasis"
@@ -117,13 +117,13 @@
       <h2>Tool Box</h2>
       My primary tools are
       <span class="emphasis"
-        >Angular, Vue, vanilla JS, Typescript, HTML, CSS, Node, Git,
+        >Angular, Vue, Javascript, Typescript, HTML, CSS, Node, Git,
         Express</span
       >
       and <span class="emphasis">Firebase</span>. I also have experience with
       <span class="emphasis"
-        >Sass, Tailwind, Angular Material, ChatGPT API, Python, Multer,
-        Beautiful Soup, PHP, PostgreSQL, AWS, CircleCI, Sharp</span
+        >PrimeVue, Sass, Tailwind, Angular Material, ChatGPT API, Python,
+        Multer, Beautiful Soup, PHP, PostgreSQL, AWS, CircleCI, Sharp</span
       >
       and <span class="emphasis">Ffmpeg</span>.
       <br />
@@ -179,11 +179,14 @@
     </div>
     <div v-if="modalContent === 'hire'">
       <h2>Hire Me</h2>
-      If you'd like to retain my skills for your company or your next project,
-      please reach out through the
-      <RouterLink to="/contact" class="hover-text"
-        ><span class="emphasis underline">contact form</span></RouterLink
-      >.
+      <p>
+        If you'd like to retain my skills for your company or your next project,
+        just click the <span class="emphasis-blue">Connect</span> tab.
+      </p>
+      <img
+        src="../assets/screen-shot.jpeg"
+        alt="a screen shot of the homepage with the connect link circled"
+      />
     </div>
   </TheModal>
 </template>
@@ -215,12 +218,26 @@ const showModal = content => {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.modal-content {
+  padding: 0;
+}
+
 .emphatic-white {
   color: white;
 }
 
+.modal {
+  padding: 2rem;
+}
+/* 
+.modal-content div {
+  padding: 2rem;
+} */
+
 .modal .header-text {
   color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 .modal a {
@@ -229,6 +246,11 @@ const showModal = content => {
 
 .modal .emphasis {
   color: var(--color-text);
+}
+
+.modal .emphasis-blue {
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 .modal a .emphasis {
