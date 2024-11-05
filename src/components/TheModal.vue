@@ -29,7 +29,7 @@ const closeModal = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,12 +38,14 @@ const closeModal = () => {
 .modal-content {
   background: var(--color-background);
   color: var(--color-text);
-  font-size: 1.75rem;
-  padding: 0 2rem 2rem 2rem;
+  font-size: 2rem;
+  padding: 0 2rem 1rem 2rem;
   border-radius: 8px;
   position: relative;
-  width: 70%;
+  width: 75%;
+  max-height: 98%;
   border: 1px solid var(--color-primary);
+  overflow: auto;
 }
 
 .close-button {
@@ -58,7 +60,6 @@ const closeModal = () => {
 }
 
 /* transition CSS */
-
 .v-enter-active,
 .v-leave-active {
   transition:

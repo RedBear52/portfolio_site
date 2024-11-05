@@ -2,7 +2,6 @@
   <WelcomeItem @icon-click="showModal('introduction')">
     <template #icon> <i class="pi pi-book"></i> </template>
     <template #heading><span class="header-text">Introduction</span></template>
-
     I'm <span class="emphasis">Ryan Spearman</span>, a lifelong
     <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
       >music professional</a
@@ -29,6 +28,7 @@
     and <span class="emphasis">Ffmpeg</span>.
     <br />
   </WelcomeItem>
+
   <WelcomeItem @icon-click="showModal('certifications')">
     <template #icon>
       <i class="pi pi-graduation-cap"></i>
@@ -42,13 +42,17 @@
       target="_blank"
       rel="noopener"
       >Intro to Programming</a
-    >,
+    >
+    <!-- place an eyball icon here -->
+    ,
     <a
       href="https://confirm.udacity.com/6YPHMFLX"
       target="_blank"
       rel="noopener"
       >Intermediate Javascript</a
-    >,
+    >
+    <!-- place eyeball icon here | move anchor/link from around cert name to around icon and add a tooltip that says 'view cert' -->
+    ,
     <a
       href="https://confirm.udacity.com/ECGAWQ4L"
       target="_blank"
@@ -106,12 +110,25 @@
   >
     <div v-if="modalContent === 'introduction'">
       <h2>Introduction</h2>
-      I'm <span class="emphasis">Ryan Spearman</span>, a lifelong
-      <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
-        >music professional</a
-      >
-      who, over the last few years, has plunged head-first into the infinitely
-      rewarding world of web & software development.
+      <img src="../assets/ryan_head.jpg" alt="" width="200px" /><br />
+
+      <p>
+        I'm <span class="emphasis">Ryan Spearman</span>, a lifelong
+        <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
+          >music professional</a
+        >
+        who, over the last few years, has plunged head-first into the infinitely
+        rewarding world of web & software development.
+      </p>
+      <p>
+        When I'm not spending my time building websites/apps or learning new
+        tech skills, I like to cycle, kayak, train Brazilian Jiu Jitsu and play
+        racquet sports.
+      </p>
+      <p>
+        I'm also a volunteer youth wrestling coach at a local, independent,
+        non-profit club.
+      </p>
     </div>
     <div v-if="modalContent === 'toolbox'">
       <h2>Tool Box</h2>
@@ -127,55 +144,68 @@
       >
       and <span class="emphasis">Ffmpeg</span>.
       <br />
+      <div class="tech-logo-container">
+        <div class="content has-text-centered">
+          <div class="tech-logos">
+            <div class="tech-logo" v-for="tool in techTools" :key="tool.name">
+              <img :src="tool.logo" :alt="tool.name" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div v-if="modalContent === 'certifications'">
       <h2>Certifications</h2>
       My certifications were all issued by
       <span class="emphasis">Accenture's Udacity Program</span> and include:
-      <a
+      <span class="emphasis">Intro to Programming</span
+      ><a
         href="https://www.udacity.com/certificate/NEKGL27E"
         target="_blank"
         rel="noopener"
-        ><span class="emphasis">Intro to Programming</span></a
-      >,
-      <a
+        ><span class="eye-con"
+          ><i
+            v-tooltip.top="'Verify Certification'"
+            class="pi pi-check-square"
+          ></i> </span
+      ></a>
+      ,
+      <span class="emphasis">Intermediate Javascript</span
+      ><a
         href="https://confirm.udacity.com/6YPHMFLX"
         target="_blank"
         rel="noopener"
-        ><span class="emphasis">Intermediate Javascript</span></a
-      >,
-      <a
+        ><span class="eye-con"
+          ><i
+            v-tooltip.top="'Verify Certification'"
+            class="pi pi-check-square"
+          ></i> </span></a
+      >, <span class="emphasis">Front End Web Developer</span
+      ><a
         href="https://confirm.udacity.com/ECGAWQ4L"
         target="_blank"
         rel="noopener"
-        ><span class="emphasis">Front End Web Developer</span></a
-      >, and
-      <a
+        ><span class="eye-con"
+          ><i
+            v-tooltip.top="'Verify Certification'"
+            class="pi pi-check-square"
+          ></i> </span></a
+      >, and <span class="emphasis">Full Stack Javascript Developer</span
+      ><a
         href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f"
         target="_blank"
         rel="noopener"
-        ><span class="emphasis">Full Stack Javascript Developer</span></a
+      >
+        <span class="eye-con"
+          ><i
+            v-tooltip.top="'Verify Certification'"
+            class="pi pi-check-square"
+          ></i> </span></a
       >.
     </div>
     <div v-if="modalContent === 'portfolio'">
-      <h2>Project Portfolio</h2>
-      Some examples of my work:
-      <a href="https://floodeditions.com/" target="_blank" rel="noopener"
-        ><span class="emphasis">Fullstack Website Build</span></a
-      >,
-      <a href="https://betterbanjopractice.com/" target="_blank" rel="noopener"
-        ><span class="emphasis">Musician's Practice Optimizer</span></a
-      >,
-      <a href="https://kdhx-uploader.com" target="_blank" rel="noopener"
-        ><span class="emphasis">Selfie Video Upload Manager</span></a
-      >,
-      <a href="https://babemon-transcriber.com/" target="_blank" rel="noopener"
-        ><span class="emphasis">Audio File Transcriber & Monitor</span></a
-      >
-      and
-      <a href="https://sonomyn.com/" target="_blank" rel="noopener"
-        ><span class="emphasis">Audio File Minifier</span></a
-      >.
+      <MyProjectPortfolio />
     </div>
     <div v-if="modalContent === 'hire'">
       <h2>Hire Me</h2>
@@ -194,6 +224,7 @@
 <script setup>
 import WelcomeItem from './WelcomeItem.vue'
 import TheModal from './TheModal.vue'
+import MyProjectPortfolio from './MyProjectPortfolio.vue'
 import { ref } from 'vue'
 
 const isModalVisible = ref(false)
@@ -203,9 +234,51 @@ const showModal = content => {
   modalContent.value = content
   isModalVisible.value = true
 }
+
+const techTools = [
+  { logo: 'src/assets/vue-logo.png' },
+  { logo: 'src/assets/angular-logo.png' },
+  { logo: 'src/assets/html-logo.png' },
+  { logo: 'src/assets/javascript-logo.png' },
+  { logo: 'src/assets/css-logo.png' },
+  { logo: 'src/assets/typescript-logo.png' },
+  { logo: 'src/assets/nodejs-logo.png' },
+  { logo: 'src/assets/express-logo.png' },
+  { logo: 'src/assets/firebase-logo.png' },
+  { logo: 'src/assets/chatgpt-logo.png' },
+  { logo: 'src/assets/git-logo.png' },
+  { logo: 'src/assets/tailwind-logo.png' },
+  { logo: 'src/assets/sass-logo.png' },
+  { logo: 'src/assets/python-logo.png' },
+  { logo: 'src/assets/postgresql-logo.png' },
+]
 </script>
 
 <style scoped>
+.eye-con {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.tech-logo-container {
+  padding-bottom: 0;
+}
+
+.tech-logo-container img {
+  margin: 1rem 0 0 0;
+  padding-bottom: 0;
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.tech-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 .hover-text {
   cursor: pointer;
   color: var(--color-primary);
@@ -229,11 +302,6 @@ const showModal = content => {
 .modal {
   padding: 2rem;
 }
-/* 
-.modal-content div {
-  padding: 2rem;
-} */
-
 .modal .header-text {
   color: var(--color-primary);
   margin-top: 0;

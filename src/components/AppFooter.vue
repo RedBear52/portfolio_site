@@ -19,6 +19,7 @@ const techTools = [
   { logo: 'src/assets/css-logo.png' },
   { logo: 'src/assets/typescript-logo.png' },
   { logo: 'src/assets/nodejs-logo.png' },
+  { logo: 'src/assets/express-logo.png' },
   { logo: 'src/assets/firebase-logo.png' },
   { logo: 'src/assets/chatgpt-logo.png' },
   { logo: 'src/assets/git-logo.png' },
@@ -26,7 +27,6 @@ const techTools = [
   { logo: 'src/assets/sass-logo.png' },
   { logo: 'src/assets/python-logo.png' },
   { logo: 'src/assets/postgresql-logo.png' },
-  { logo: 'src/assets/express-logo.png' },
 ]
 </script>
 
@@ -38,6 +38,7 @@ const techTools = [
   bottom: 0;
   text-align: center;
   color: var(--color-primary);
+  z-index: -1;
 }
 
 .tech-logos {
