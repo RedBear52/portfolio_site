@@ -21,8 +21,9 @@
         <p>
           A fullstack website build for a small, independent poetry press. The
           site features a minimalist design, a custom CMS dashboard, a dynamic
-          book catalog, and a basic link-logic integration to a 3rd party
-          shopping cart.
+          book catalog, a direct sdk integration with a Firebase Firestore
+          database and a basic link-logic integration to a 3rd party shopping
+          cart.
         </p>
         <div class="project-links">
           <a
@@ -81,61 +82,81 @@
         <h3>Selfie Video Upload Portal</h3>
         <div class="img-container">
           <img
-            src="../assets/banjo_regimen.jpeg"
+            src="../assets/kdhx_dashboard.jpeg"
             alt="homepage of a publisher's website"
           />
           <img
-            src="../assets/banjo_goals.jpeg"
+            src="../assets/kdhx_uploader_interface.jpeg"
             alt="dashboard of a publisher's website"
           />
           <img
-            src="../assets/banjo_timer.jpeg"
+            src="../assets/kdhx_login.jpeg"
             alt="live navigation of a publisher's website"
           />
         </div>
         <p>
-          A web application that helps musicians optimize their practice time.
-          Features include a practice timer, a practice regiment builder,
-          musical goal setting interface, note-taking and the ability to mark
-          practice tasks as complete.
+          A no-frills web application purpose-built during a fund drive for my
+          local community radio station. The KDHX Uploader allows volunteer DJs
+          to record a testimonial video on their phone and easily upload it to a
+          bespoke Firebase Firestore database. Administrators can then log into
+          a custom dashboard to download the videos and use them in their online
+          promotional endeavors.
         </p>
+
         <p>
-          Includes log in and registration, user profile management, and a
-          database to store practice data.
+          Dashboard features include a pop up video preview player, downloader,
+          and a delete button
         </p>
+        .
+
         <div class="project-links">
           <a
-            href="https://github.com/RedBear52/banjoPracticeOptimizer"
+            href="https://github.com/RedBear52/kdhx_video_uploader.git"
             target="_blank"
             rel="noopener"
             ><i class="pi pi-github"></i
           ></a>
+          <a href="https://kdhx-uploader.com" target="_blank" rel="noopener"
+            ><i class="pi pi-globe"></i
+          ></a>
+        </div>
+      </div>
+      <div class="project">
+        <h3>Full Website Rebuild</h3>
+        <div class="img-container">
+          <img
+            src="../assets/flood_library.jpeg"
+            alt="homepage of a publisher's website"
+          />
+          <img
+            src="../assets/flood_dashboard.jpeg"
+            alt="dashboard of a publisher's website"
+          />
+          <img
+            src="../assets/flood_nav.jpeg"
+            alt="live navigation of a publisher's website"
+          />
+        </div>
+        <p>
+          A fullstack website build for a small, independent poetry press. The
+          site features a minimalist design, a custom CMS dashboard, a dynamic
+          book catalog, a direct sdk integration with a Firebase Firestore
+          database and a basic link-logic integration to a 3rd party shopping
+          cart.
+        </p>
+        <div class="project-links">
           <a
-            href="https://betterbanjopractice.com/"
+            href="https://github.com/RedBear52/flood_editions_back_up_copy_2024_06_09.git"
             target="_blank"
             rel="noopener"
+            ><i class="pi pi-github"></i
+          ></a>
+          <a href="https://floodeditions.com/" target="_blank" rel="noopener"
             ><i class="pi pi-globe"></i
           ></a>
         </div>
       </div>
     </div>
-    <br /><br />
-    <a href="https://floodeditions.com/" target="_blank" rel="noopener"
-      ><span class="emphasis">Fullstack Website Build</span></a
-    >,
-    <a href="https://betterbanjopractice.com/" target="_blank" rel="noopener"
-      ><span class="emphasis">Musician's Practice Optimizer</span></a
-    >,
-    <a href="https://kdhx-uploader.com" target="_blank" rel="noopener"
-      ><span class="emphasis">Selfie Video Upload Manager</span></a
-    >,
-    <a href="https://babemon-transcriber.com/" target="_blank" rel="noopener"
-      ><span class="emphasis">Audio File Transcriber & Monitor</span></a
-    >
-    and
-    <a href="https://sonomyn.com/" target="_blank" rel="noopener"
-      ><span class="emphasis">Audio File Minifier</span></a
-    >.
   </div>
 </template>
 

@@ -2,7 +2,10 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import Toast from 'vue-toastification'
-// Import the CSS or use your own!
+import PrimeVue from 'primevue/config'
+import Aura from '@primevue/themes/aura'
+import Tooltip from 'primevue/tooltip'
+// imported css file for toastification styles | overiding a VERY small amount of styles using !important 😈
 import 'vue-toastification/dist/index.css'
 
 import App from './App.vue'
@@ -26,5 +29,11 @@ app.use(Toast, {
   icon: true,
   rtl: false,
 })
+app.use(PrimeVue, {
+  theme: {
+    preset: Aura,
+  },
+})
+app.directive('tooltip', Tooltip)
 
 app.mount('#app')

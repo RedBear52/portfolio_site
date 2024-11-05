@@ -29,10 +29,14 @@
 </template>
 
 <style>
+/* * {
+  font-size: 1.05rem;
+} */
+
 .about-container {
   margin: 0 auto;
   padding: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-align: center;
   border: 1px solid var(--color-primary);
   border-radius: 8px;
