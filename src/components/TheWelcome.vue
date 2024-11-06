@@ -126,8 +126,8 @@
         racquet sports.
       </p>
       <p>
-        I'm also a volunteer youth wrestling coach at a local, independent,
-        non-profit club.
+        I'm also a volunteer youth wrestling coach at an independent, non-profit
+        wrestling club here in Saint Louis, Missouri.
       </p>
     </div>
     <div v-if="modalContent === 'toolbox'">

@@ -2,7 +2,7 @@
   <div>
     <h2>Project Portfolio</h2>
     <div class="project-container">
-      <div class="project">
+      <div class="project" id="flood-editions">
         <h3>Full Website Rebuild</h3>
         <div class="img-container">
           <img
@@ -37,9 +37,9 @@
           ></a>
         </div>
       </div>
-      <div class="project">
+      <div class="project" id="better-banjo">
         <h3>Musicians Practice Optimizer</h3>
-        <div class="img-container">
+        <div class="img-container" id="optimizer">
           <img
             src="../assets/banjo_regimen.jpeg"
             alt="homepage of a publisher's website"
@@ -78,7 +78,7 @@
           ></a>
         </div>
       </div>
-      <div class="project">
+      <div class="project" id="khdx-uploader">
         <h3>Selfie Video Upload Portal</h3>
         <div class="img-container">
           <img
@@ -121,8 +121,8 @@
           ></a>
         </div>
       </div>
-      <div class="project">
-        <h3>Full Website Rebuild</h3>
+      <div class="project" id="babemon-transcriber">
+        <h3>Audio File Monitor and Transcriber</h3>
         <div class="img-container">
           <img
             src="../assets/flood_library.jpeg"
@@ -165,16 +165,27 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin: 2rem 0 0 0;
 }
 
 img {
   max-width: 20%;
   max-height: 100%;
+  /* border: 1px solid rgba(60, 184, 285, 1); */
 }
 
 h3 {
   color: white;
   font-weight: 500;
+  margin-top: 1rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+#optimizer {
+  margin-bottom: 1rem;
 }
 
 .project {
@@ -193,5 +204,17 @@ h3 {
 .project-links i {
   font-size: 2rem;
   color: var(--color-primary);
+}
+
+#flood-editions {
+  background-color: rgba(240, 110, 128, 0.1);
+}
+
+#better-banjo {
+  background-color: rgba(229, 194, 132, 0.1);
+}
+
+#khdx-uploader {
+  background-color: rgba(252, 10, 2, 0.1);
 }
 </style>

@@ -23,6 +23,7 @@ img {
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  /* font-family: monospace; */
   /* background-color: pink; */
   align-items: center;
 }
