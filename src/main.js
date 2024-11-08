@@ -1,5 +1,4 @@
 import './assets/main.css'
-
 import { createApp } from 'vue'
 import Toast from 'vue-toastification'
 import PrimeVue from 'primevue/config'

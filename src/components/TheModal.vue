@@ -38,7 +38,7 @@ const closeModal = () => {
 .modal-content {
   background: var(--color-background);
   color: var(--color-text);
-  font-size: 2rem;
+  /* font-size: 1.3rem; */
   padding: 0 2rem 1rem 2rem;
   border-radius: 8px;
   position: relative;

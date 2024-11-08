@@ -24,7 +24,6 @@ img {
   padding: 2rem;
   font-weight: normal;
   /* font-family: monospace; */
-  /* background-color: pink; */
   align-items: center;
 }
 
@@ -33,15 +32,13 @@ a {
   text-decoration: none;
 }
 
+.pi {
+  font-size: 5rem;
+}
+
 a .pi {
   margin-right: 0.5rem;
   color: var(--color-primary);
-}
-
-@media (hover: hover) {
-  a:hover {
-    /* color: var(--color-border-hover); */
-  }
 }
 
 @media (min-width: 1024px) {
@@ -57,7 +54,7 @@ a .pi {
   }
 
   span.emphasis {
-    font-weight: bold;
+    font-weight: 525;
     color: var(--color-primary);
   }
 }

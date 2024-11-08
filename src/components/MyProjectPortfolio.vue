@@ -105,9 +105,8 @@
 
         <p>
           Dashboard features include a pop up video preview player, downloader,
-          and a delete button
+          and a delete button.
         </p>
-        .
 
         <div class="project-links">
           <a
@@ -125,34 +124,56 @@
         <h3>Audio File Monitor and Transcriber</h3>
         <div class="img-container">
           <img
-            src="../assets/flood_library.jpeg"
-            alt="homepage of a publisher's website"
+            id="optimizer"
+            src="../assets/babemon_homepage.jpeg"
+            alt="homepage of a transcriber web app"
           />
           <img
-            src="../assets/flood_dashboard.jpeg"
-            alt="dashboard of a publisher's website"
+            id="optimizer"
+            src="../assets/babemon_transcription.jpeg"
+            alt="short transcription example with keywords highlighted"
           />
           <img
-            src="../assets/flood_nav.jpeg"
-            alt="live navigation of a publisher's website"
+            id="optimizer"
+            src="../assets/babemon_results.jpeg"
+            alt="screen shot of transcription results"
           />
         </div>
         <p>
-          A fullstack website build for a small, independent poetry press. The
-          site features a minimalist design, a custom CMS dashboard, a dynamic
-          book catalog, a direct sdk integration with a Firebase Firestore
-          database and a basic link-logic integration to a 3rd party shopping
-          cart.
+          A web application built for community radio stations to monitor FCC
+          and other spoken, on-air policy violations.
+        </p>
+
+        <p>
+          Babemon Transcriber allows users to upload an audio file. The app then
+          transcribes the audio to text and monitors the text for specific
+          flagged keywords. The user can then download the transcription and
+          flagged keywords as an HTML file.
+        </p>
+        <p>
+          The front end is built with Angular and the back end is built with
+          Node, Express and the Open AI API.
         </p>
         <div class="project-links">
           <a
-            href="https://github.com/RedBear52/flood_editions_back_up_copy_2024_06_09.git"
+            v-tooltip.top="'Babemon Front End'"
+            href="https://github.com/RedBear52/Babemon_front_end.git"
             target="_blank"
             rel="noopener"
             ><i class="pi pi-github"></i
           ></a>
-          <a href="https://floodeditions.com/" target="_blank" rel="noopener"
+          <a
+            href="https://babemon-transcriber.com/"
+            target="_blank"
+            rel="noopener"
             ><i class="pi pi-globe"></i
+          ></a>
+          <a
+            v-tooltip.top="'Babemon API'"
+            href="https://github.com/RedBear52/babemon-api.git"
+            target="_blank"
+            rel="noopener"
+            ><i class="pi pi-github"></i
           ></a>
         </div>
       </div>
@@ -171,17 +192,17 @@
 img {
   max-width: 20%;
   max-height: 100%;
-  /* border: 1px solid rgba(60, 184, 285, 1); */
 }
 
 h3 {
   color: white;
   font-weight: 500;
   margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 #optimizer {
@@ -194,11 +215,20 @@ p {
   overflow: scroll;
 }
 
+.modal h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.project p {
+  margin-left: 1rem;
+}
+
 .project-links {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 0;
 }
 
 .project-links i {
@@ -216,5 +246,13 @@ p {
 
 #khdx-uploader {
   background-color: rgba(252, 10, 2, 0.1);
+}
+
+#babemon-transcriber {
+  background-color: rgba(253, 254, 31, 0.1);
+}
+
+p {
+  margin-bottom: 1rem;
 }
 </style>

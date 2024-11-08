@@ -17,15 +17,22 @@
     <template #heading>Tool Box</template>
 
     My primary tools are
-    <span class="emphasis"
-      >Angular, Vue, Javascript, Typescript, HTML, CSS, Node, Git, Express</span
-    >
-    and <span class="emphasis">Firebase</span>. I also have experience with
-    <span class="emphasis"
-      >Sass, Tailwind, Angular Material, ChatGPT API, Python, Multer, Beautiful
-      Soup, PHP, PostgreSQL, AWS, CircleCI, Sharp</span
-    >
-    and <span class="emphasis">Ffmpeg</span>.
+    <span class="emphasis">Angular</span>, <span class="emphasis">Vue</span>,
+    <span class="emphasis">Javascript</span>,
+    <span class="emphasis">Typescript</span>,
+    <span class="emphasis">HTML</span>, <span class="emphasis">CSS</span>,
+    <span class="emphasis">Node</span>, <span class="emphasis">Git</span>,
+    <span class="emphasis">Express</span> and
+    <span class="emphasis">Firebase</span>. I also have experience with
+    <span class="emphasis">Sass</span>, <span class="emphasis">Tailwind</span>,
+    <span class="emphasis">Angular Material</span>,
+    <span class="emphasis">ChatGPT API</span>,
+    <span class="emphasis">Python</span>, <span class="emphasis">Multer</span>,
+    <span class="emphasis">Beautiful Soup</span>,
+    <span class="emphasis">PHP</span>, <span class="emphasis">PostgreSQL</span>,
+    <span class="emphasis">AWS</span>, <span class="emphasis">CircleCI</span>,
+    <span class="emphasis">Sharp</span> and
+    <span class="emphasis">Ffmpeg</span>.
     <br />
   </WelcomeItem>
 
@@ -35,24 +42,20 @@
     </template>
     <template #heading>Certifications</template>
 
-    My certifications were all issued by
+    My certifications were issued by
     <span class="emphatic-white">Accenture's Udacity Program</span> and include:
     <a
       href="https://www.udacity.com/certificate/NEKGL27E"
       target="_blank"
       rel="noopener"
       >Intro to Programming</a
-    >
-    <!-- place an eyball icon here -->
-    ,
+    >,
     <a
       href="https://confirm.udacity.com/6YPHMFLX"
       target="_blank"
       rel="noopener"
       >Intermediate Javascript</a
-    >
-    <!-- place eyeball icon here | move anchor/link from around cert name to around icon and add a tooltip that says 'view cert' -->
-    ,
+    >,
     <a
       href="https://confirm.udacity.com/ECGAWQ4L"
       target="_blank"
@@ -132,17 +135,26 @@
     </div>
     <div v-if="modalContent === 'toolbox'">
       <h2>Tool Box</h2>
-      My primary tools are
-      <span class="emphasis"
-        >Angular, Vue, Javascript, Typescript, HTML, CSS, Node, Git,
-        Express</span
-      >
-      and <span class="emphasis">Firebase</span>. I also have experience with
-      <span class="emphasis"
-        >PrimeVue, Sass, Tailwind, Angular Material, ChatGPT API, Python,
-        Multer, Beautiful Soup, PHP, PostgreSQL, AWS, CircleCI, Sharp</span
-      >
-      and <span class="emphasis">Ffmpeg</span>.
+      <p>
+        My primary tools are
+        <span class="emphasis">Angular</span>,
+        <span class="emphasis">Vue</span>,
+        <span class="emphasis">Javascript</span>,
+        <span class="emphasis">Typescript</span>,
+        <span class="emphasis">Typescript</span>,
+        <span class="emphasis">CSS</span>, <span class="emphasis">Node</span>,
+        <span class="emphasis">Git</span>,
+        <span class="emphasis">Express</span>
+        and <span class="emphasis">Firebase</span>.
+      </p>
+      <p>
+        I also have experience with
+        <span class="emphasis"
+          >PrimeVue, Sass, Tailwind, Angular Material, ChatGPT API, Python,
+          Multer, Beautiful Soup, PHP, PostgreSQL, AWS, CircleCI, Sharp</span
+        >
+        and <span class="emphasis">Ffmpeg</span>.
+      </p>
       <br />
       <div class="tech-logo-container">
         <div class="content has-text-centered">
@@ -157,52 +169,52 @@
 
     <div v-if="modalContent === 'certifications'">
       <h2>Certifications</h2>
-      My certifications were all issued by
-      <span class="emphasis">Accenture's Udacity Program</span> and include:
-      <span class="emphasis">Intro to Programming</span
-      ><a
-        href="https://www.udacity.com/certificate/NEKGL27E"
-        target="_blank"
-        rel="noopener"
-        ><span class="eye-con"
-          ><i
-            v-tooltip.top="'Verify Certification'"
-            class="pi pi-check-square"
-          ></i> </span
-      ></a>
-      ,
-      <span class="emphasis">Intermediate Javascript</span
-      ><a
-        href="https://confirm.udacity.com/6YPHMFLX"
-        target="_blank"
-        rel="noopener"
-        ><span class="eye-con"
-          ><i
-            v-tooltip.top="'Verify Certification'"
-            class="pi pi-check-square"
-          ></i> </span></a
-      >, <span class="emphasis">Front End Web Developer</span
-      ><a
-        href="https://confirm.udacity.com/ECGAWQ4L"
-        target="_blank"
-        rel="noopener"
-        ><span class="eye-con"
-          ><i
-            v-tooltip.top="'Verify Certification'"
-            class="pi pi-check-square"
-          ></i> </span></a
-      >, and <span class="emphasis">Full Stack Javascript Developer</span
-      ><a
-        href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f"
-        target="_blank"
-        rel="noopener"
-      >
-        <span class="eye-con"
-          ><i
-            v-tooltip.top="'Verify Certification'"
-            class="pi pi-check-square"
-          ></i> </span></a
-      >.
+      <p>
+        My certifications were issued by
+        <span class="emphasis">Accenture's Udacity Program</span> and include:
+        <span class="emphasis">Intro to Programming</span
+        ><a
+          href="https://www.udacity.com/certificate/NEKGL27E"
+          target="_blank"
+          rel="noopener"
+          ><span class="eye-con"
+            ><i
+              v-tooltip.top="'Verify Certification'"
+              class="pi pi-check-square"
+            ></i> </span></a
+        >, <span class="emphasis">Intermediate Javascript</span
+        ><a
+          href="https://confirm.udacity.com/6YPHMFLX"
+          target="_blank"
+          rel="noopener"
+          ><span class="eye-con"
+            ><i
+              v-tooltip.top="'Verify Certification'"
+              class="pi pi-check-square"
+            ></i> </span></a
+        >, <span class="emphasis">Front End Web Developer</span
+        ><a
+          href="https://confirm.udacity.com/ECGAWQ4L"
+          target="_blank"
+          rel="noopener"
+          ><span class="eye-con"
+            ><i
+              v-tooltip.top="'Verify Certification'"
+              class="pi pi-check-square"
+            ></i> </span></a
+        >, and <span class="emphasis">Full Stack Javascript Developer</span
+        ><a
+          href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="eye-con"
+            ><i
+              v-tooltip.top="'Verify Certification'"
+              class="pi pi-check-square"
+            ></i> </span></a
+        >.
+      </p>
     </div>
     <div v-if="modalContent === 'portfolio'">
       <MyProjectPortfolio />
@@ -255,6 +267,10 @@ const techTools = [
 </script>
 
 <style scoped>
+/* h2 {
+  font-size: rem;
+} */
+
 .eye-con {
   margin-left: 0.5rem;
   font-size: 1.5rem;
@@ -265,7 +281,7 @@ const techTools = [
 }
 
 .tech-logo-container img {
-  margin: 1rem 0 0 0;
+  margin-top: 1rem;
   padding-bottom: 0;
   max-width: 2rem;
   max-height: 2rem;
@@ -295,6 +311,11 @@ const techTools = [
   padding: 0;
 }
 
+.modal-content p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
 .emphatic-white {
   color: white;
 }
@@ -302,17 +323,19 @@ const techTools = [
 .modal {
   padding: 2rem;
 }
-.modal .header-text {
+
+.modal .header-text,
+.modal a .emphasis:hover {
   color: var(--color-primary);
-  margin-top: 0;
-  margin-bottom: 2rem;
 }
 
-.modal a {
-  color: var(--color-text);
+.modal .header-text {
+  margin: 0 0 2rem;
 }
 
-.modal .emphasis {
+.modal a,
+.modal .emphasis,
+.modal a .emphasis {
   color: var(--color-text);
 }
 
@@ -321,20 +344,16 @@ const techTools = [
   color: var(--color-primary);
 }
 
-.modal a .emphasis {
-  color: var(--color-text);
-}
-
 .modal a:hover {
   text-decoration: underline;
-  color: var(--color-primary);
-}
-
-.modal a .emphasis:hover {
-  color: var(--color-primary);
 }
 
 .modal .underline {
   text-decoration: underline;
+}
+
+.modal h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
 }
 </style>

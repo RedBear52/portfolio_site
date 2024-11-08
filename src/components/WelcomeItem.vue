@@ -8,7 +8,7 @@
       <slot name="icon"></slot>
     </i>
     <div class="details">
-      <h3
+      <h2
         :style="{
           color: headingColor,
           textDecoration: textDecoration,
@@ -16,7 +16,7 @@
         }"
       >
         <slot name="heading"></slot>
-      </h3>
+      </h2>
       <slot></slot>
     </div>
   </div>
@@ -55,6 +55,8 @@ const headingColorSecondary = () => {
 .details {
   flex: 1;
   margin-left: 1rem;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 i {
@@ -71,11 +73,15 @@ i:hover {
   color: var(--color-background);
 }
 
-h3 {
-  font-size: 1.2rem;
+h2 {
+  font-size: 1.75rem;
   font-weight: 500;
   margin-bottom: 0.4rem;
   color: var(--color-heading);
+}
+
+.modal h2 {
+  font-size: 2rem;
 }
 
 @media (min-width: 1024px) {

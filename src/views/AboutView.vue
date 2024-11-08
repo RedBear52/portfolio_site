@@ -3,36 +3,28 @@
     <div class="about-container">
       <h1>Howdy!</h1>
       <br />
-      <p>
-        A few years ago, I started learning to code. This exploration opened up
-        an entirely new universe of practical & creative expression in my life.
-      </p>
+      <p>A few years ago, I started coding.</p>
       <br />
       <p>
-        For 25 years I've worked as an independent music professional (recording
-        artist, performer, instructor, promoter, writer and radio DJ). This
-        experience taught me a lot about communication, connection and the
-        dogged persistence required to turn ideas into living/breathing things.
+        Before code, I worked 25 years as an independent music
+        professional-recording, performing, teaching, producing, writing and
+        radio.
       </p>
       <br />
-      <p>
-        Outside of work and tech, I'm a volunteer youth wrestling coach who
-        likes to camp, kayak, cycle and grapple.
-      </p>
+      <p>I learned to listen, connect and communicate.</p>
       <br />
       <p>
-        I live to learn through play and I love to build clean/functional apps
-        that feel good to use.
+        More so, I learned that dogged persistence is the magical key that turns
+        mere ideas into living/breathing things.
       </p>
+
+      <br />
+      <p>I love to learn-thru-play and build tools that feel good to use.</p>
     </div>
   </div>
 </template>
 
 <style>
-/* * {
-  font-size: 1.05rem;
-} */
-
 .about-container {
   margin: 0 auto;
   padding: 2rem;

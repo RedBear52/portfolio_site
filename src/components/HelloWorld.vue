@@ -22,10 +22,10 @@ defineProps({
         ><i class="pi pi-globe"></i
       ></a>
     </div>
-    <h3>
+
+    <p class="tag-line">
       An autodidactic web/software developer using tech to tackle problems.
-      <br /><br />
-    </h3>
+    </p>
   </div>
 </template>
 
@@ -42,6 +42,10 @@ h1 {
   top: -10px;
 }
 
+h2 {
+  font-size: 2.2rem;
+}
+
 h3 {
   font-size: 1.2rem;
 }
@@ -49,6 +53,12 @@ h3 {
 .greetings h1,
 .greetings h3 {
   text-align: center;
+}
+
+.tag-line {
+  font-size: 1.2rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
