@@ -40,12 +40,12 @@
       </transition>
     </router-view>
   </div>
-  <AppFooter />
+  <!-- <AppFooter /> -->
 </template>
 
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import AppFooter from './components/AppFooter.vue'
+// import AppFooter from './components/AppFooter.vue'
 import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 

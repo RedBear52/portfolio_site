@@ -2,10 +2,15 @@
 
 @import 'primeicons/primeicons.css';
 
-/* * {
-  border: 1px solid red;
+/* Typography */
+/* .exo-glyph {
+  font-family: 'Exo';
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
 } */
-
 /* Toast Styles */
 .toast-style {
   background-color: var(--color-background) !important;
@@ -32,10 +37,6 @@ a {
   text-decoration: none;
 }
 
-.pi {
-  font-size: 5rem;
-}
-
 a .pi {
   margin-right: 0.5rem;
   color: var(--color-primary);
@@ -53,8 +54,9 @@ a .pi {
     padding: 0 2rem;
   }
 
-  span.emphasis {
-    font-weight: 525;
+  span.emphasis,
+  p .emphasis {
+    font-weight: 200;
     color: var(--color-primary);
   }
 }

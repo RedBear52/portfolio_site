@@ -2,12 +2,14 @@
   <WelcomeItem @icon-click="showModal('introduction')">
     <template #icon> <i class="pi pi-book"></i> </template>
     <template #heading><span class="header-text">Introduction</span></template>
-    I'm <span class="emphasis">Ryan Spearman</span>, a lifelong
-    <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
-      >music professional</a
-    >
-    who, over the last few years, has plunged head-first into the infinitely
-    rewarding world of web & software development.
+    <p class="exo-glyph">
+      I'm <span class="emphasis">Ryan Spearman</span>, a lifelong
+      <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
+        >music professional</a
+      >
+      who, over the last few years, has plunged head-first into the infinitely
+      rewarding world of web & software development.
+    </p>
   </WelcomeItem>
 
   <WelcomeItem @icon-click="showModal('toolbox')">
@@ -16,23 +18,28 @@
     </template>
     <template #heading>Tool Box</template>
 
-    My primary tools are
-    <span class="emphasis">Angular</span>, <span class="emphasis">Vue</span>,
-    <span class="emphasis">Javascript</span>,
-    <span class="emphasis">Typescript</span>,
-    <span class="emphasis">HTML</span>, <span class="emphasis">CSS</span>,
-    <span class="emphasis">Node</span>, <span class="emphasis">Git</span>,
-    <span class="emphasis">Express</span> and
-    <span class="emphasis">Firebase</span>. I also have experience with
-    <span class="emphasis">Sass</span>, <span class="emphasis">Tailwind</span>,
-    <span class="emphasis">Angular Material</span>,
-    <span class="emphasis">ChatGPT API</span>,
-    <span class="emphasis">Python</span>, <span class="emphasis">Multer</span>,
-    <span class="emphasis">Beautiful Soup</span>,
-    <span class="emphasis">PHP</span>, <span class="emphasis">PostgreSQL</span>,
-    <span class="emphasis">AWS</span>, <span class="emphasis">CircleCI</span>,
-    <span class="emphasis">Sharp</span> and
-    <span class="emphasis">Ffmpeg</span>.
+    <p class="exo-glyph">
+      My primary tools are <span class="emphasis">Angular</span>,
+      <span class="emphasis">Vue</span>,
+      <span class="emphasis">Javascript</span>,
+      <span class="emphasis">Typescript</span>,
+      <span class="emphasis">HTML</span>, <span class="emphasis">CSS</span>,
+      <span class="emphasis">Node</span>, <span class="emphasis">Git</span>,
+      <span class="emphasis">Express</span> and
+      <span class="emphasis">Firebase</span>. I also have experience with
+      <span class="emphasis">Sass</span>,
+      <span class="emphasis">Tailwind</span>,
+      <span class="emphasis">Angular Material</span>,
+      <span class="emphasis">ChatGPT API</span>,
+      <span class="emphasis">Python</span>,
+      <span class="emphasis">Multer</span>,
+      <span class="emphasis">Beautiful Soup</span>,
+      <span class="emphasis">PHP</span>,
+      <span class="emphasis">PostgreSQL</span>,
+      <span class="emphasis">AWS</span>, <span class="emphasis">CircleCI</span>,
+      <span class="emphasis">Sharp</span> and
+      <span class="emphasis">Ffmpeg</span>.
+    </p>
     <br />
   </WelcomeItem>
 
@@ -42,32 +49,35 @@
     </template>
     <template #heading>Certifications</template>
 
-    My certifications were issued by
-    <span class="emphatic-white">Accenture's Udacity Program</span> and include:
-    <a
-      href="https://www.udacity.com/certificate/NEKGL27E"
-      target="_blank"
-      rel="noopener"
-      >Intro to Programming</a
-    >,
-    <a
-      href="https://confirm.udacity.com/6YPHMFLX"
-      target="_blank"
-      rel="noopener"
-      >Intermediate Javascript</a
-    >,
-    <a
-      href="https://confirm.udacity.com/ECGAWQ4L"
-      target="_blank"
-      rel="noopener"
-      >Front End Web Developer</a
-    >, and
-    <a
-      href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f"
-      target="_blank"
-      rel="noopener"
-      >Full Stack Javascript Developer</a
-    >.
+    <p class="exo-glyph">
+      My certifications were issued by
+      <span class="emphatic-white">Accenture's Udacity Program</span> and
+      include:
+      <a
+        href="https://www.udacity.com/certificate/NEKGL27E"
+        target="_blank"
+        rel="noopener"
+        >Intro to Programming</a
+      >,
+      <a
+        href="https://confirm.udacity.com/6YPHMFLX"
+        target="_blank"
+        rel="noopener"
+        >Intermediate Javascript</a
+      >,
+      <a
+        href="https://confirm.udacity.com/ECGAWQ4L"
+        target="_blank"
+        rel="noopener"
+        >Front End Web Developer</a
+      >, and
+      <a
+        href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f"
+        target="_blank"
+        rel="noopener"
+        >Full Stack Javascript Developer</a
+      >.
+    </p>
   </WelcomeItem>
 
   <WelcomeItem @icon-click="showModal('portfolio')">
@@ -76,23 +86,25 @@
     </template>
     <template #heading>Project Portfolio</template>
 
-    Some examples of my work:
-    <a href="https://floodeditions.com/" target="_blank" rel="noopener"
-      >Fullstack Website Build</a
-    >,
-    <a href="https://betterbanjopractice.com/" target="_blank" rel="noopener"
-      >Musician's Practice Optimizer</a
-    >,
-    <a href="https://kdhx-uploader.com" target="_blank" rel="noopener"
-      >Selfie Video Upload Manager</a
-    >,
-    <a href="https://babemon-transcriber.com/" target="_blank" rel="noopener"
-      >Audio File Transcriber & Monitor</a
-    >
-    and
-    <a href="https://sonomyn.com/" target="_blank" rel="noopener"
-      >Audio File Minifier</a
-    >.
+    <p class="exo-glyph">
+      Some examples of my work:
+      <a href="https://floodeditions.com/" target="_blank" rel="noopener"
+        >Fullstack Website Build</a
+      >,
+      <a href="https://betterbanjopractice.com/" target="_blank" rel="noopener"
+        >Musician's Practice Optimizer</a
+      >,
+      <a href="https://kdhx-uploader.com" target="_blank" rel="noopener"
+        >Selfie Video Upload Manager</a
+      >,
+      <a href="https://babemon-transcriber.com/" target="_blank" rel="noopener"
+        >Audio File Transcriber & Monitor</a
+      >
+      and
+      <a href="https://sonomyn.com/" target="_blank" rel="noopener"
+        >Audio File Minifier</a
+      >.
+    </p>
   </WelcomeItem>
 
   <WelcomeItem @icon-click="showModal('hire')">
@@ -101,9 +113,11 @@
     </template>
     <template #heading>Hire Me</template>
 
-    If you'd like to retain my skills for your company or your next project,
-    please reach out through the
-    <RouterLink to="/contact" class="hover-text">contact form</RouterLink>.
+    <p class="exo-glyph">
+      If you'd like to retain my skills for your company or your next project,
+      please reach out through the
+      <RouterLink to="/contact" class="hover-text">contact form</RouterLink>.
+    </p>
   </WelcomeItem>
 
   <TheModal
@@ -140,7 +154,6 @@
         <span class="emphasis">Angular</span>,
         <span class="emphasis">Vue</span>,
         <span class="emphasis">Javascript</span>,
-        <span class="emphasis">Typescript</span>,
         <span class="emphasis">Typescript</span>,
         <span class="emphasis">CSS</span>, <span class="emphasis">Node</span>,
         <span class="emphasis">Git</span>,
@@ -267,9 +280,11 @@ const techTools = [
 </script>
 
 <style scoped>
-/* h2 {
-  font-size: rem;
-} */
+p {
+  font-size: 0.85em;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
 
 .eye-con {
   margin-left: 0.5rem;
@@ -340,7 +355,6 @@ const techTools = [
 }
 
 .modal .emphasis-blue {
-  font-weight: bold;
   color: var(--color-primary);
 }
 
