@@ -31,3 +31,6 @@ coverage
 
 # env variables
 .env
+
+# project notes
+NOTES.md
