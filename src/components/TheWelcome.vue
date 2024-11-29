@@ -1,139 +1,103 @@
 <template>
-  <WelcomeItem @icon-click="showModal('introduction')">
-    <template #icon> <i class="pi pi-book"></i> </template>
-    <template #heading><span class="header-text">Introduction</span></template>
-    <p class="exo-glyph">
-      I'm <span class="emphasis">Ryan Spearman</span>, a lifelong
-      <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
-        >music professional</a
-      >
-      who, over the last few years, has plunged head-first into the infinitely
-      rewarding world of web & software development.
-    </p>
-  </WelcomeItem>
+  <div class="container">
+    <WelcomeItem @icon-click="showModal('introduction')">
+      <template #icon> <i class="pi pi-book"></i> </template>
+      <template #heading><span class="header-text">Introduction</span></template>
+      <p class="exo-glyph">
+        I'm <span class="emphasis">Ryan Spearman</span>, a lifelong
+        <span class="emphasis">music professional</span>
+        who, over the last few years, has plunged head-first into the infinitely
+        rewarding world of web & software development.
+      </p>
+    </WelcomeItem>
 
-  <WelcomeItem @icon-click="showModal('toolbox')">
-    <template #icon>
-      <i class="pi pi-wrench" @mouseover="showGlow"></i>
-    </template>
-    <template #heading>Tool Box</template>
+    <WelcomeItem @icon-click="showModal('toolbox')">
+      <template #icon>
+        <i class="pi pi-wrench" @mouseover="showGlow"></i>
+      </template>
+      <template #heading>Tool Box</template>
 
-    <p class="exo-glyph">
-      My primary tools are <span class="emphasis">Angular</span>,
-      <span class="emphasis">Vue</span>,
-      <span class="emphasis">Javascript</span>,
-      <span class="emphasis">Typescript</span>,
-      <span class="emphasis">HTML</span>, <span class="emphasis">CSS</span>,
-      <span class="emphasis">Node</span>, <span class="emphasis">Git</span>,
-      <span class="emphasis">Express</span> and
-      <span class="emphasis">Firebase</span>. I also have experience with
-      <span class="emphasis">Sass</span>,
-      <span class="emphasis">Tailwind</span>,
-      <span class="emphasis">Angular Material</span>,
-      <span class="emphasis">ChatGPT API</span>,
-      <span class="emphasis">Python</span>,
-      <span class="emphasis">Multer</span>,
-      <span class="emphasis">Beautiful Soup</span>,
-      <span class="emphasis">PHP</span>,
-      <span class="emphasis">PostgreSQL</span>,
-      <span class="emphasis">AWS</span>, <span class="emphasis">CircleCI</span>,
-      <span class="emphasis">Sharp</span> and
-      <span class="emphasis">Ffmpeg</span>.
-    </p>
-    <br />
-  </WelcomeItem>
+      <p class="exo-glyph">
+        My primary tools are <span class="emphasis">Angular</span>,
+        <span class="emphasis">Vue</span>,
+        <span class="emphasis">Javascript</span>,
+        <span class="emphasis">Typescript</span>,
+        <span class="emphasis">HTML</span>, <span class="emphasis">CSS</span>,
+        <span class="emphasis">Node</span>, <span class="emphasis">Git</span>,
+        <span class="emphasis">Express</span> and
+        <span class="emphasis">Firebase</span>. I also have experience with
+        <span class="emphasis">Sass</span>,
+        <span class="emphasis">Tailwind</span>,
+        <span class="emphasis">Angular Material</span>,
+        <span class="emphasis">ChatGPT API</span>,
+        <span class="emphasis">Python</span>,
+        <span class="emphasis">Multer</span>,
+        <span class="emphasis">Beautiful Soup</span>,
+        <span class="emphasis">PHP</span>,
+        <span class="emphasis">PostgreSQL</span>,
+        <span class="emphasis">AWS</span>,
+        <span class="emphasis">CircleCI</span>,
+        <span class="emphasis">Sharp</span> and
+        <span class="emphasis">Ffmpeg</span>.
+      </p>
+      <br />
+    </WelcomeItem>
 
-  <WelcomeItem @icon-click="showModal('certifications')">
-    <template #icon>
-      <i class="pi pi-graduation-cap"></i>
-    </template>
-    <template #heading>Certifications</template>
+    <WelcomeItem @icon-click="showModal('certifications')">
+      <template #icon>
+        <i class="pi pi-graduation-cap"></i>
+      </template>
+      <template #heading>Certifications</template>
 
-    <p class="exo-glyph">
-      My certifications were issued by
-      <span class="emphatic-white">Accenture's Udacity Program</span> and
-      include:
-      <a
-        href="https://www.udacity.com/certificate/NEKGL27E"
-        target="_blank"
-        rel="noopener"
-        >Intro to Programming</a
-      >,
-      <a
-        href="https://confirm.udacity.com/6YPHMFLX"
-        target="_blank"
-        rel="noopener"
-        >Intermediate Javascript</a
-      >,
-      <a
-        href="https://confirm.udacity.com/ECGAWQ4L"
-        target="_blank"
-        rel="noopener"
-        >Front End Web Developer</a
-      >, and
-      <a
-        href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f"
-        target="_blank"
-        rel="noopener"
-        >Full Stack Javascript Developer</a
-      >.
-    </p>
-  </WelcomeItem>
+      <p class="exo-glyph">
+        My certifications were issued by
+        <span class="emphatic-white">Accenture's Udacity Program</span> and
+        include: <span class="emphasis">Intro to Programming</span>,
+        <span class="emphasis">Intermediate Javascript</span>,
+        <span class="emphasis">Front End Web Developer</span>, and
+        <span class="emphasis">Full Stack Javascript Developer</span>.
+      </p>
+    </WelcomeItem>
 
-  <WelcomeItem @icon-click="showModal('portfolio')">
-    <template #icon>
-      <i class="pi pi-briefcase"></i>
-    </template>
-    <template #heading>Project Portfolio</template>
+    <WelcomeItem @icon-click="showModal('portfolio')">
+      <template #icon>
+        <i class="pi pi-briefcase"></i>
+      </template>
+      <template #heading>Project Portfolio</template>
 
-    <p class="exo-glyph">
-      Some examples of my work:
-      <a href="https://floodeditions.com/" target="_blank" rel="noopener"
-        >Fullstack Website Build</a
-      >,
-      <a href="https://betterbanjopractice.com/" target="_blank" rel="noopener"
-        >Musician's Practice Optimizer</a
-      >,
-      <a href="https://kdhx-uploader.com" target="_blank" rel="noopener"
-        >Selfie Video Upload Manager</a
-      >,
-      <a href="https://babemon-transcriber.com/" target="_blank" rel="noopener"
-        >Audio File Transcriber & Monitor</a
-      >
-      and
-      <a href="https://sonomyn.com/" target="_blank" rel="noopener"
-        >Audio File Minifier</a
-      >.
-    </p>
-  </WelcomeItem>
+      <p class="exo-glyph">
+        Some examples of my work:
+        <span class="emphasis">Fullstack Website Build</span>,
+        <span class="emphasis">Musician's Practice Optimizer</span>,
+        <span class="emphasis">Selfie Video Upload Manager</span>,
+        <span class="emphasis">Audio File Transcriber & Monitor</span>
+        and
+        <span class="emphasis">Audio File Minifier</span>.
+      </p>
+    </WelcomeItem>
 
-  <WelcomeItem @icon-click="showModal('hire')">
-    <template #icon>
-      <i class="pi pi-link"></i>
-    </template>
-    <template #heading>Hire Me</template>
+    <WelcomeItem @icon-click="showModal('hire')">
+      <template #icon>
+        <i class="pi pi-link"></i>
+      </template>
+      <template #heading>Hire Me</template>
 
-    <p class="exo-glyph">
-      If you'd like to retain my skills for your company or your next project,
-      please reach out through the
-      <RouterLink to="/contact" class="hover-text">contact form</RouterLink>.
-    </p>
-  </WelcomeItem>
+      <p class="exo-glyph">
+        If you'd like to retain my skills for your company or your next project,
+        please reach out through the
+        <RouterLink to="/contact" class="emphasis-blue">contact form</RouterLink>.
+      </p>
+    </WelcomeItem>
+  </div>
 
-  <TheModal
-    class="modal"
-    :isVisible="isModalVisible"
-    @close="isModalVisible = false"
-  >
+  <TheModal class="modal" :isVisible="isModalVisible" @close="isModalVisible = false">
     <div v-if="modalContent === 'introduction'">
       <h2>Introduction</h2>
       <img src="../assets/ryan_head.jpg" alt="" width="200px" /><br />
 
       <p>
         I'm <span class="emphasis">Ryan Spearman</span>, a lifelong
-        <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
-          >music professional</a
-        >
+        <a href="https://ryanspearman.net/" target="_blank" rel="noopener">music professional</a>
         who, over the last few years, has plunged head-first into the infinitely
         rewarding world of web & software development.
       </p>
@@ -162,10 +126,8 @@
       </p>
       <p>
         I also have experience with
-        <span class="emphasis"
-          >PrimeVue, Sass, Tailwind, Angular Material, ChatGPT API, Python,
-          Multer, Beautiful Soup, PHP, PostgreSQL, AWS, CircleCI, Sharp</span
-        >
+        <span class="emphasis">PrimeVue, Sass, Tailwind, Angular Material, ChatGPT API, Python,
+          Multer, Beautiful Soup, PHP, PostgreSQL, AWS, CircleCI, Sharp</span>
         and <span class="emphasis">Ffmpeg</span>.
       </p>
       <br />
@@ -184,50 +146,48 @@
       <h2>Certifications</h2>
       <p>
         My certifications were issued by
-        <span class="emphasis">Accenture's Udacity Program</span> and include:
-        <span class="emphasis">Intro to Programming</span
-        ><a
-          href="https://www.udacity.com/certificate/NEKGL27E"
-          target="_blank"
-          rel="noopener"
-          ><span class="eye-con"
-            ><i
-              v-tooltip.top="'Verify Certification'"
-              class="pi pi-check-square"
-            ></i> </span></a
-        >, <span class="emphasis">Intermediate Javascript</span
-        ><a
-          href="https://confirm.udacity.com/6YPHMFLX"
-          target="_blank"
-          rel="noopener"
-          ><span class="eye-con"
-            ><i
-              v-tooltip.top="'Verify Certification'"
-              class="pi pi-check-square"
-            ></i> </span></a
-        >, <span class="emphasis">Front End Web Developer</span
-        ><a
-          href="https://confirm.udacity.com/ECGAWQ4L"
-          target="_blank"
-          rel="noopener"
-          ><span class="eye-con"
-            ><i
-              v-tooltip.top="'Verify Certification'"
-              class="pi pi-check-square"
-            ></i> </span></a
-        >, and <span class="emphasis">Full Stack Javascript Developer</span
-        ><a
-          href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="eye-con"
-            ><i
-              v-tooltip.top="'Verify Certification'"
-              class="pi pi-check-square"
-            ></i> </span></a
-        >.
+        <span class="emphasis">Accenture's Udacity Program</span>:
       </p>
+      <ul>
+        <li>
+          <span class="emphasis">Intro to Programming</span><a href="https://www.udacity.com/certificate/NEKGL27E"
+            target="_blank" rel="noopener"><span class="eye-con"><i v-tooltip.top="'View Certification'"
+                class="pi pi-check-square"></i> </span></a>
+        </li>
+        <li>
+          <span class="emphasis">Intermediate Javascript</span><a href="https://confirm.udacity.com/6YPHMFLX"
+            target="_blank" rel="noopener"><span class="eye-con"><i v-tooltip.top="'View Certification'"
+                class="pi pi-check-square"></i> </span></a>
+        </li>
+        <li>
+          <span class="emphasis">Front End Web Developer</span><a href="https://confirm.udacity.com/ECGAWQ4L"
+            target="_blank" rel="noopener"><span class="eye-con"><i v-tooltip.top="'View Certification'"
+                class="pi pi-check-square"></i>
+            </span></a>
+        </li>
+        <li>
+          <span class="emphasis">Full Stack Javascript Developer</span><a
+            href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f" target="_blank"
+            rel="noopener">
+            <span class="eye-con"><i v-tooltip.top="'View Certification'" class="pi pi-check-square"></i> </span></a>
+        </li>
+      </ul>
+      <!-- <p>
+        My certifications were issued by
+        <span class="emphasis">Accenture's Udacity Program</span>:
+        <br>
+        <span class="emphasis">Intro to Programming</span><a href="https://www.udacity.com/certificate/NEKGL27E"
+          target="_blank" rel="noopener"><span class="eye-con"><i v-tooltip.top="'View Certification'"
+              class="pi pi-check-square"></i> </span></a>, <span class="emphasis">Intermediate Javascript</span><a
+          href="https://confirm.udacity.com/6YPHMFLX" target="_blank" rel="noopener"><span class="eye-con"><i
+              v-tooltip.top="'View Certification'" class="pi pi-check-square"></i> </span></a>, <span
+          class="emphasis">Front End Web Developer</span><a href="https://confirm.udacity.com/ECGAWQ4L" target="_blank"
+          rel="noopener"><span class="eye-con"><i v-tooltip.top="'View Certification'" class="pi pi-check-square"></i>
+          </span></a>, and <span class="emphasis">Full Stack Javascript Developer</span><a
+          href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f" target="_blank"
+          rel="noopener">
+          <span class="eye-con"><i v-tooltip.top="'View Certification'" class="pi pi-check-square"></i> </span></a>.
+      </p> -->
     </div>
     <div v-if="modalContent === 'portfolio'">
       <MyProjectPortfolio />
@@ -238,10 +198,7 @@
         If you'd like to retain my skills for your company or your next project,
         just click the <span class="emphasis-blue">Connect</span> tab.
       </p>
-      <img
-        src="../assets/screen-shot.jpeg"
-        alt="a screen shot of the homepage with the connect link circled"
-      />
+      <img src="../assets/screen-shot.jpeg" alt="a screen shot of the homepage with the connect link circled" />
     </div>
   </TheModal>
 </template>
@@ -250,7 +207,26 @@
 import WelcomeItem from './WelcomeItem.vue'
 import TheModal from './TheModal.vue'
 import MyProjectPortfolio from './MyProjectPortfolio.vue'
-import { ref } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+
+const darkMode = ref(true)
+
+const updateDarkMode = () => {
+  darkMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+}
+
+onMounted(() => {
+  updateDarkMode()
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', updateDarkMode)
+})
+
+onUnmounted(() => {
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .removeEventListener('change', updateDarkMode)
+})
 
 const isModalVisible = ref(false)
 const modalContent = ref('')
@@ -260,7 +236,7 @@ const showModal = content => {
   isModalVisible.value = true
 }
 
-const techTools = [
+const techTools = computed(() => [
   { logo: 'src/assets/vue-logo.png' },
   { logo: 'src/assets/angular-logo.png' },
   { logo: 'src/assets/html-logo.png' },
@@ -268,7 +244,11 @@ const techTools = [
   { logo: 'src/assets/css-logo.png' },
   { logo: 'src/assets/typescript-logo.png' },
   { logo: 'src/assets/nodejs-logo.png' },
-  { logo: 'src/assets/express-logo.png' },
+  {
+    logo: darkMode.value
+      ? 'src/assets/express-logo-dark.png'
+      : 'src/assets/express-logo.png',
+  },
   { logo: 'src/assets/firebase-logo.png' },
   { logo: 'src/assets/chatgpt-logo.png' },
   { logo: 'src/assets/git-logo.png' },
@@ -276,10 +256,19 @@ const techTools = [
   { logo: 'src/assets/sass-logo.png' },
   { logo: 'src/assets/python-logo.png' },
   { logo: 'src/assets/postgresql-logo.png' },
-]
+])
 </script>
 
 <style scoped>
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 p {
   font-size: 0.85em;
   margin: 1rem 0;
@@ -369,5 +358,23 @@ p {
 .modal h2 {
   font-size: 2rem;
   margin: 1rem 0;
+}
+
+@media (prefers-color-scheme: light) {
+
+  .emphasis,
+  .emphasis-blue {
+    color: black;
+    font-weight: 600;
+  }
+
+  .emphatic-white {
+    color: black;
+    font-weight: 600;
+  }
+
+  a .pi {
+    color: var(--color-blue-light-mode);
+  }
 }
 </style>

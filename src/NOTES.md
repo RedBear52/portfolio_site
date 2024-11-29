@@ -1,10 +1,8 @@
 # Notes 4 Project
 
-## Styling TODOs
-
 ### General Fixes
 
-- [] welcome component shifts during nav (due to size? or padding changes? or position?)
+- [ONLY A PROB ON SAFARI] welcome component shifts during nav (due to size? or padding changes? or position?)
   - [ ] is screen size dependent. is not happening when screen is large happens on mbp
 - [ ] modal triggers not obvious enough (add hover/scroll effect)
   - [ ] look into modern scroll moving effects

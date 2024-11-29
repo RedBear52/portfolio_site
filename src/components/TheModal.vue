@@ -42,11 +42,13 @@ const closeModal = () => {
   padding: 0 2rem 1rem 2rem;
   border-radius: 8px;
   position: relative;
-  width: 75%;
+  width: 85%;
   max-height: 98%;
   border: 1px solid var(--color-primary);
   overflow: auto;
 }
+
+
 
 .close-button {
   position: absolute;

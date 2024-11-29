@@ -1,25 +1,11 @@
 <template>
   <div>
     <header>
-      <div
-        class="logo-container"
-        @mouseover="showImage = true"
-        @mouseleave="showImage = false"
-      >
-        <img
-          alt="coder logo"
-          class="logo"
-          src="@/assets/glowing_tarot_coder.webp"
-          width="225px"
-        />
-        <Transition>
-          <img
-            v-if="showImage"
-            class="logo-hovered"
-            src="./assets/ryan_head.jpg"
-            alt="photo image of ryan spearman"
-          />
-        </Transition>
+      <div class="logo-container" @mouseover="showImage = true" @mouseleave="showImage = false">
+        <img alt="coder logo" class="logo" src="@/assets/glowing_tarot_coder.webp" width="225px" />
+        <!-- <Transition> -->
+        <img v-if="showImage" class="logo-hovered" src="./assets/ryan_head.jpg" alt="photo image of ryan spearman" />
+        <!-- </Transition> -->
       </div>
 
       <div class="wrapper">
@@ -45,13 +31,11 @@
 
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-// import AppFooter from './components/AppFooter.vue'
 import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 
 const showImage = ref(false)
 </script>
-
 <style scoped>
 header {
   line-height: 1.5;
@@ -73,12 +57,6 @@ header {
   display: block;
   border-radius: 8px;
   opacity: 1;
-  transition: opacity 0.5s ease-in;
-}
-
-.logo-container:hover .logo {
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
 }
 
 .logo-hovered {
@@ -90,10 +68,14 @@ header {
   object-fit: cover;
   opacity: 0;
   z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: ease 0.3s;
 }
 
-.logo-hovered {
+.logo-container:hover .logo-hovered {
   opacity: 0.9;
+  visibility: visible;
 }
 
 nav {
@@ -130,10 +112,12 @@ nav a:first-of-type {
     opacity 0.3s ease,
     transform 0.1s ease;
 }
+
 .fade-enter-from {
   opacity: 0;
   transform: translateY(5px);
 }
+
 .fade-leave-to {
   opacity: 0;
   transform: translateY(5px);
@@ -202,6 +186,13 @@ nav a:first-of-type {
   nav {
     margin-top: none;
     font-size: 1.25rem;
+  }
+}
+
+/* light theme link tweak */
+@media (prefers-color-scheme: light) {
+  nav a.router-link-exact-active {
+    color: var(--color-clicked-link);
   }
 }
 </style>

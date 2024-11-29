@@ -1,7 +1,3 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
   <div>
     <main>
@@ -9,3 +5,9 @@ import TheWelcome from '../components/TheWelcome.vue'
     </main>
   </div>
 </template>
+
+<script setup>
+import TheWelcome from '../components/TheWelcome.vue'
+</script>
+
+<style scoped></style>

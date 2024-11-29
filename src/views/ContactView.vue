@@ -4,17 +4,8 @@
       <h1>Let's Talk</h1>
       <form @submit.prevent="sendEmail" ref="contact-form">
         <input type="text" placeholder="Name" v-model="name" name="from_name" />
-        <input
-          type="email"
-          placeholder="Email"
-          v-model="email"
-          name="reply_to"
-        />
-        <textarea
-          placeholder="Message"
-          v-model="message"
-          name="message"
-        ></textarea>
+        <input type="email" placeholder="Email" v-model="email" name="reply_to" />
+        <textarea placeholder="Message" v-model="message" name="message"></textarea>
         <button type="submit">Send</button>
       </form>
     </div>
@@ -82,19 +73,20 @@ textarea {
   margin-bottom: 1rem;
 }
 
-button:hover {
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 button {
   background-color: var(--color-primary-dark);
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
   border-radius: 8px;
+  cursor: pointer;
   padding: 0.5rem 1rem;
+}
+
+button:hover {
+  background-color: var(--color-primary);
+  color: white;
+
+  border-radius: 8px;
+  cursor: pointer;
 }
 </style>

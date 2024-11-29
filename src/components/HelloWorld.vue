@@ -1,4 +1,26 @@
+<template>
+
+  <div class="container">
+    <div class="greetings">
+      <h1 class="green">{{ msg }}</h1>
+      <div class="icon-container">
+        <a v-tooltip.top="'github'" href="https://github.com/RedBear52?tab=repositories" target="_blank"
+          rel="noopener"><i class="pi pi-github"></i></a>
+        <br />
+        <a v-tooltip.top="'website'" href="https://ryanspearman.net/" target="_blank" rel="noopener"><i
+            class="pi pi-globe"></i></a>
+      </div>
+
+
+      <p class="tag-line">
+        An autodidactic web/software developer using tech to tackle challenges.
+      </p>
+    </div>
+  </div>
+</template>
+
 <script setup>
+
 defineProps({
   msg: {
     type: String,
@@ -6,28 +28,6 @@ defineProps({
   },
 })
 </script>
-
-<template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <div class="icon-container">
-      <a
-        href="https://github.com/RedBear52?tab=repositories"
-        target="_blank"
-        rel="noopener"
-        ><i class="pi pi-github"></i
-      ></a>
-      <br />
-      <a href="https://ryanspearman.net/" target="_blank" rel="noopener"
-        ><i class="pi pi-globe"></i
-      ></a>
-    </div>
-
-    <p class="tag-line">
-      An autodidactic web/software developer using tech to tackle problems.
-    </p>
-  </div>
-</template>
 
 <style scoped>
 .icon-container {
@@ -61,7 +61,13 @@ h3 {
   margin-bottom: 1rem;
 }
 
+/* theme toggle styling */
+.header-view {
+  margin-bottom: 2rem;
+}
+
 @media (min-width: 1024px) {
+
   .greetings h1,
   .greetings h3 {
     text-align: left;
