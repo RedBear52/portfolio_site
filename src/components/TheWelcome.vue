@@ -176,8 +176,6 @@
     <div v-if="modalContent === 'portfolio'">
       <MyProjectPortfolio />
     </div>
-    <Transition name="fade">
-      <router-link to="/contact" class="contact-link">
       <div v-if="modalContent === 'hire'">
       <h2>Hire Me</h2>
       <p>
@@ -186,8 +184,6 @@
       </p>
       <img src="../assets/screen-shot.jpeg" alt="a screen shot of the homepage with the connect link circled" />
     </div>
-    </router-link>
-    </Transition>
   </TheModal>
 </template>
 
@@ -248,19 +244,7 @@ const techTools = computed(() => [
 </script>
 
 <style scoped>
-/* transition CSS */
-.fade-enter-active,
-.fade-leave-active {
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
-}
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-30px);
-}
 
 .contact-link {
   text-decoration: none ;
@@ -371,11 +355,8 @@ p {
 }
 
 .modal img {
-  /* change image propery contain, cover */
   max-width: 100%;
 }
-
-
 
 @media (prefers-color-scheme: light) {
 
