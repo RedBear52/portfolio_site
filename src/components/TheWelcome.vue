@@ -172,27 +172,13 @@
             <span class="eye-con"><i v-tooltip.top="'View Certification'" class="pi pi-check-square"></i> </span></a>
         </li>
       </ul>
-      <!-- <p>
-        My certifications were issued by
-        <span class="emphasis">Accenture's Udacity Program</span>:
-        <br>
-        <span class="emphasis">Intro to Programming</span><a href="https://www.udacity.com/certificate/NEKGL27E"
-          target="_blank" rel="noopener"><span class="eye-con"><i v-tooltip.top="'View Certification'"
-              class="pi pi-check-square"></i> </span></a>, <span class="emphasis">Intermediate Javascript</span><a
-          href="https://confirm.udacity.com/6YPHMFLX" target="_blank" rel="noopener"><span class="eye-con"><i
-              v-tooltip.top="'View Certification'" class="pi pi-check-square"></i> </span></a>, <span
-          class="emphasis">Front End Web Developer</span><a href="https://confirm.udacity.com/ECGAWQ4L" target="_blank"
-          rel="noopener"><span class="eye-con"><i v-tooltip.top="'View Certification'" class="pi pi-check-square"></i>
-          </span></a>, and <span class="emphasis">Full Stack Javascript Developer</span><a
-          href="https://www.udacity.com/certificate/e/3df826a4-348b-11ed-9e2c-2be6d7c13e3f" target="_blank"
-          rel="noopener">
-          <span class="eye-con"><i v-tooltip.top="'View Certification'" class="pi pi-check-square"></i> </span></a>.
-      </p> -->
     </div>
     <div v-if="modalContent === 'portfolio'">
       <MyProjectPortfolio />
     </div>
-    <div v-if="modalContent === 'hire'">
+    <Transition name="fade">
+      <router-link to="/contact" class="contact-link">
+      <div v-if="modalContent === 'hire'">
       <h2>Hire Me</h2>
       <p>
         If you'd like to retain my skills for your company or your next project,
@@ -200,6 +186,8 @@
       </p>
       <img src="../assets/screen-shot.jpeg" alt="a screen shot of the homepage with the connect link circled" />
     </div>
+    </router-link>
+    </Transition>
   </TheModal>
 </template>
 
@@ -260,6 +248,28 @@ const techTools = computed(() => [
 </script>
 
 <style scoped>
+/* transition CSS */
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.contact-link {
+  text-decoration: none ;
+}
+
+.contact-link:hover {
+  text-decoration: none !important;
+}
+
 ul {
   list-style-type: none;
 }
@@ -360,6 +370,13 @@ p {
   margin: 1rem 0;
 }
 
+.modal img {
+  /* change image propery contain, cover */
+  max-width: 100%;
+}
+
+
+
 @media (prefers-color-scheme: light) {
 
   .emphasis,
@@ -376,5 +393,32 @@ p {
   a .pi {
     color: var(--color-blue-light-mode);
   }
+
+  .modal .pi-check-square {
+  color: var(--color-blue-light-mode);
 }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .emphasis,
+  .emphasis-blue {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .emphatic-white {
+    color: white;
+    font-weight: 600;
+  }
+
+  a .pi {
+    color: var(--color-blue-dark-mode);
+  }
+
+  .modal .pi-check-square {
+  color: var(--color-primary);
+}
+}
+
 </style>

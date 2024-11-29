@@ -150,7 +150,7 @@ nav a:first-of-type {
   }
 }
 
-@media (min-width: 598px) and (max-width: 1023px) {
+@media (min-width: 298px) and (max-width: 1023px) {
   .logo-container {
     display: flex;
     align-items: center;
@@ -169,25 +169,24 @@ nav a:first-of-type {
   nav {
     font-size: 1.25rem;
     margin-top: none;
+    margin-bottom: 1rem;
+
   }
 }
 
-@media (max-width: 597px) {
+/* @media (max-width: 597px) {
   .logo-container {
     display: flex;
     align-items: center;
     margin: auto;
-  }
+  } 
 
-  .logo {
-    border-bottom: 2px solid var(--color-primary);
-  }
 
   nav {
     margin-top: none;
     font-size: 1.25rem;
   }
-}
+ }  */
 
 /* light theme link tweak */
 @media (prefers-color-scheme: light) {

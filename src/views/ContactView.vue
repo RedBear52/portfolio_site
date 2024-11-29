@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contact-form-container">
     <div class="contact-form">
       <h1>Let's Talk</h1>
       <form @submit.prevent="sendEmail" ref="contact-form">
@@ -88,5 +88,11 @@ button:hover {
 
   border-radius: 8px;
   cursor: pointer;
+}
+
+@media (min-width: 298px) and (max-width: 1024px) {
+  .contact-form{
+    transform: translateY(-2%);
+  }
 }
 </style>

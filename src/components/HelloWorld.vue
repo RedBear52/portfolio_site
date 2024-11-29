@@ -11,9 +11,8 @@
             class="pi pi-globe"></i></a>
       </div>
 
-
       <p class="tag-line">
-        An autodidactic web/software developer using tech to tackle challenges.
+        An autodidactic web/software developer using tech to tackle challenges. 
       </p>
     </div>
   </div>
@@ -72,6 +71,10 @@ h3 {
   .greetings h3 {
     text-align: left;
   }
+
+  .tag-line {
+    text-align: left;
+  }
 }
 
 @media (min-width: 598px) and (max-width: 1024px) {
@@ -79,12 +82,20 @@ h3 {
     justify-content: center;
     font-size: 1.25rem;
   }
+
+  .tag-line {
+    text-align: center;
+}
 }
 
 @media (max-width: 597px) {
   .icon-container {
     justify-content: center;
     font-size: 1.2.5rem;
+  }
+
+  .tag-line {
+    text-align: center;
   }
 }
 </style>

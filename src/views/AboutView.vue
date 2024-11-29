@@ -19,7 +19,7 @@
       </p>
 
       <br />
-      <p>I love to learn-thru-play and build tools that feel good to use.</p>
+      <p>I love to learn-thru-play and build tools that feel good to use.</p> 
     </div>
   </div>
 </template>
@@ -42,6 +42,12 @@ h1 {
   .about-container {
     font-size: 1rem;
     line-height: 1.5;
+  }
+}
+
+@media (min-width: 298px) and (max-width: 1024px) {
+  .about-container{
+    transform: translateY(-2%);
   }
 }
 </style>

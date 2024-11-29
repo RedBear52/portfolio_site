@@ -36,13 +36,6 @@ const headingColorSecondary = () => {
 </script>
 
 <style scoped>
-i {
-  border: 1px solid var(--color-border);
-  /* text-decoration: line-through; */
-  position: relative;
-}
-
-
 
 .item {
   margin-top: 2rem;
@@ -58,6 +51,7 @@ i {
   padding-right: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 h2 {
@@ -172,4 +166,49 @@ i {
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
   }
 }
+
+@media (min-width: 298px) and (max-width: 1024px) {
+  .item {
+    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+  }
+
+  .item:before {
+    display: none;
+      border: none;
+
+  }
+
+  .item:after {
+    display: none;
+      border: none;
+  }
+
+  .item i {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background: transparent;
+  }
+
+}
+
+  .details {
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+@media (max-width: 598px) {
+  .item i {
+    visibility: hidden;
+  }
+
+  .item {
+    margin-left: 0;
+   padding-left: 0;
+   top: 0;
+  }
+}
+
 </style>
