@@ -12,7 +12,7 @@
       </div>
 
       <p class="tag-line">
-        An autodidactic web/software developer using tech to tackle challenges. 
+        An autodidactic web/software developer using tech to tackle challenges.
       </p>
     </div>
   </div>
@@ -65,7 +65,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1201px) {
 
   .greetings h1,
   .greetings h3 {
@@ -77,7 +77,7 @@ h3 {
   }
 }
 
-@media (min-width: 598px) and (max-width: 1024px) {
+@media (min-width: 598px) and (max-width: 1200px) {
   .icon-container {
     justify-content: center;
     font-size: 1.25rem;
@@ -85,7 +85,7 @@ h3 {
 
   .tag-line {
     text-align: center;
-}
+  }
 }
 
 @media (max-width: 597px) {

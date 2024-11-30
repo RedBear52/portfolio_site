@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <header>
       <div class="logo-container" @mouseover="showImage = true" @mouseleave="showImage = false">
         <img alt="coder logo" class="logo" src="@/assets/glowing_tarot_coder.webp" width="225px" />
@@ -123,7 +123,7 @@ nav a:first-of-type {
   transform: translateY(5px);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1201px) {
   header {
     display: flex;
     place-items: center;
@@ -150,7 +150,19 @@ nav a:first-of-type {
   }
 }
 
-@media (min-width: 298px) and (max-width: 1023px) {
+@media (max-width: 1250px) {
+  nav .router-link {
+    font-size: 0.85rem;
+  }
+}
+
+/* TODO:: CHANGE MAX-WIDTH TO 1023 AFTER TESTING IS DONE */
+@media (min-width: 298px) and (max-width: 1200px) {
+  /* .container {
+    background-color: red;
+    width: 100vw;
+  } */
+
   .logo-container {
     display: flex;
     align-items: center;

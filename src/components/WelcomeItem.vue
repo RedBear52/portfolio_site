@@ -36,7 +36,6 @@ const headingColorSecondary = () => {
 </script>
 
 <style scoped>
-
 .item {
   margin-top: 2rem;
   display: flex;
@@ -160,27 +159,27 @@ i {
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1201px) {
   .item {
     margin-top: 0;
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
   }
 }
 
-@media (min-width: 298px) and (max-width: 1024px) {
+@media (min-width: 298px) and (max-width: 1200px) {
   .item {
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
   }
 
   .item:before {
     display: none;
-      border: none;
+    border: none;
 
   }
 
   .item:after {
     display: none;
-      border: none;
+    border: none;
   }
 
   .item i {
@@ -194,10 +193,10 @@ i {
 
 }
 
-  .details {
-    margin-left: 0;
-    padding: 0 1rem;
-  }
+.details {
+  margin-left: 0;
+  padding: 0 1rem;
+}
 
 @media (max-width: 598px) {
   .item i {
@@ -206,9 +205,8 @@ i {
 
   .item {
     margin-left: 0;
-   padding-left: 0;
-   top: 0;
+    padding-left: 0;
+    top: 0;
   }
 }
-
 </style>

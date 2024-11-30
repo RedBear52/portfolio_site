@@ -42,7 +42,7 @@ a .pi {
   color: var(--color-primary);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1201px) {
   body {
     display: flex;
     place-items: center;

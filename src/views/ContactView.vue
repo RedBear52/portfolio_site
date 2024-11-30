@@ -90,8 +90,8 @@ button:hover {
   cursor: pointer;
 }
 
-@media (min-width: 298px) and (max-width: 1024px) {
-  .contact-form{
+@media (min-width: 298px) and (max-width: 1200px) {
+  .contact-form {
     transform: translateY(-2%);
   }
 }
