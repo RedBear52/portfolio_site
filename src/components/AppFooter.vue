@@ -41,17 +41,17 @@ const techTools = [
   z-index: -1;
 }
 
+.footer img {
+  max-width: 2.25;
+  max-height: 2.25rem;
+}
+
 .tech-logos {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-}
-
-.footer img {
-  max-width: 2.25;
-  max-height: 2.25rem;
 }
 
 @media (min-width: 598px) and (max-width: 1023px) {
@@ -77,13 +77,13 @@ const techTools = [
     flex-wrap: wrap;
   }
 
-  .tech-logos {
-    flex-wrap: wrap;
-  }
-
   .footer img {
     max-width: 2rem;
     max-height: 2rem;
+  }
+
+  .tech-logos {
+    flex-wrap: wrap;
   }
 }
 </style>

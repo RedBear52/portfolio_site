@@ -1,5 +1,4 @@
 <template>
-
   <div class="container">
     <div class="greetings">
       <h1 class="green">{{ msg }}</h1>
@@ -10,7 +9,6 @@
         <a v-tooltip.top="'website'" href="https://ryanspearman.net/" target="_blank" rel="noopener"><i
             class="pi pi-globe"></i></a>
       </div>
-
       <p class="tag-line">
         An autodidactic web/software developer using tech to tackle challenges.
       </p>
@@ -19,7 +17,6 @@
 </template>
 
 <script setup>
-
 defineProps({
   msg: {
     type: String,
@@ -29,11 +26,6 @@ defineProps({
 </script>
 
 <style scoped>
-.icon-container {
-  display: flex;
-  flex-direction: row;
-}
-
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
@@ -54,16 +46,17 @@ h3 {
   text-align: center;
 }
 
+.icon-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .tag-line {
   font-size: 1.2rem;
   margin-top: 1.3rem;
   margin-bottom: 1rem;
 }
 
-/* theme toggle styling */
-.header-view {
-  margin-bottom: 2rem;
-}
 
 @media (min-width: 1201px) {
 

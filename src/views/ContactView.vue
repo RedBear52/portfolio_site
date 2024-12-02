@@ -85,11 +85,11 @@ button {
 button:hover {
   background-color: var(--color-primary);
   color: white;
-
   border-radius: 8px;
   cursor: pointer;
 }
 
+/* work-around media query fix for margin styles not applying at bottom of form*/
 @media (min-width: 298px) and (max-width: 1200px) {
   .contact-form {
     transform: translateY(-2%);

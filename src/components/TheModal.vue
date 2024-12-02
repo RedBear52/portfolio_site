@@ -38,7 +38,6 @@ const closeModal = () => {
 .modal-content {
   background: var(--color-background);
   color: var(--color-text);
-  /* font-size: 1.3rem; */
   padding: 0 2rem 1rem 2rem;
   border-radius: 8px;
   position: relative;
@@ -47,8 +46,6 @@ const closeModal = () => {
   border: 1px solid var(--color-primary);
   overflow: auto;
 }
-
-
 
 .close-button {
   position: absolute;
@@ -61,7 +58,7 @@ const closeModal = () => {
   color: var(--color-primary);
 }
 
-/* transition CSS */
+/* vue transition CSS */
 .v-enter-active,
 .v-leave-active {
   transition:

@@ -107,7 +107,7 @@
       </p>
       <p>
         I'm also a volunteer youth wrestling coach at an independent, non-profit
-        wrestling club here in Saint Louis, Missouri.
+        wrestling club.
       </p>
     </div>
     <div v-if="modalContent === 'toolbox'">
@@ -172,9 +172,11 @@
         </li>
       </ul>
     </div>
+
     <div v-if="modalContent === 'portfolio'">
       <MyProjectPortfolio />
     </div>
+
     <div v-if="modalContent === 'hire'">
       <h2>Hire Me</h2>
       <p>
@@ -192,8 +194,8 @@ import TheModal from './TheModal.vue'
 import MyProjectPortfolio from './MyProjectPortfolio.vue'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
+// /\ a whole lot of code so that I can show two different express.js logos depending on the user's dark mode preference /\
 const darkMode = ref(true)
-
 const updateDarkMode = () => {
   darkMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches
 }
@@ -210,6 +212,7 @@ onUnmounted(() => {
     .matchMedia('(prefers-color-scheme: dark)')
     .removeEventListener('change', updateDarkMode)
 })
+// /\ end of core code for dark mode logo fix  /\
 
 const isModalVisible = ref(false)
 const modalContent = ref('')
@@ -266,6 +269,10 @@ p {
   line-height: 1.5;
 }
 
+.emphatic-white {
+  color: white;
+}
+
 .eye-con {
   margin-left: 0.5rem;
   font-size: 1.5rem;
@@ -311,10 +318,6 @@ p {
   margin: 1rem 0;
 }
 
-.emphatic-white {
-  color: white;
-}
-
 .modal {
   padding: 2rem;
 }
@@ -356,7 +359,6 @@ p {
 }
 
 @media (prefers-color-scheme: light) {
-
   .emphasis,
   .emphasis-blue {
     color: black;
@@ -377,8 +379,8 @@ p {
   }
 }
 
+/* dark/light mode adjustments */
 @media (prefers-color-scheme: dark) {
-
   .emphasis,
   .emphasis-blue {
     color: var(--color-primary);

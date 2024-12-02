@@ -1,17 +1,15 @@
 @import './base.css';
-
 @import 'primeicons/primeicons.css';
 
-/* Typography */
-/* .exo-glyph {
-  font-family: 'Exo';
-  font-optical-sizing: auto;
-  font-weight: 450;
-  font-style: normal;
-  font-size: 1rem;
-  text-rendering: optimizeLegibility;
-} */
-/* Toast Styles */
+#app {
+  max-width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  align-items: center;
+}
+
 .toast-style {
   background-color: var(--color-background) !important;
   border: 1px solid var(--color-primary) !important;
@@ -20,16 +18,6 @@
 
 img {
   border-radius: 4px;
-}
-
-#app {
-  max-width: 1280px;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-  /* font-family: monospace; */
-  align-items: center;
 }
 
 a {
@@ -43,15 +31,15 @@ a .pi {
 }
 
 @media (min-width: 1201px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
   #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+  }
+
+  body {
+    display: flex;
+    place-items: center;
   }
 
   span.emphasis,

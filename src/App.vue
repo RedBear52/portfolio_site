@@ -26,7 +26,6 @@
       </transition>
     </router-view>
   </div>
-  <!-- <AppFooter /> -->
 </template>
 
 <script setup>
@@ -36,14 +35,11 @@ import { ref } from 'vue'
 
 const showImage = ref(false)
 </script>
+
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-.footer {
-  margin-top: 3rem;
 }
 
 .logo-container {
@@ -106,6 +102,7 @@ nav a:first-of-type {
   font-size: 1rem;
 }
 
+/* vue transition styling settings for router view nav */
 .fade-enter-active,
 .fade-leave-active {
   transition:
@@ -121,6 +118,7 @@ nav a:first-of-type {
   opacity: 0;
 }
 
+/* vue transitions style settings for photo/tarot coder img */
 .ryan-enter-active {
   transition:
     opacity 0.3s ease,
@@ -170,13 +168,7 @@ nav a:first-of-type {
   }
 }
 
-/* TODO:: CHANGE MAX-WIDTH TO 1023 AFTER TESTING IS DONE */
 @media (min-width: 298px) and (max-width: 1200px) {
-  /* .container {
-    background-color: red;
-    width: 100vw;
-  } */
-
   .logo-container {
     display: flex;
     align-items: center;
@@ -200,21 +192,7 @@ nav a:first-of-type {
   }
 }
 
-/* @media (max-width: 597px) {
-  .logo-container {
-    display: flex;
-    align-items: center;
-    margin: auto;
-  } 
-
-
-  nav {
-    margin-top: none;
-    font-size: 1.25rem;
-  }
- }  */
-
-/* light theme link tweak */
+/* light theme link styling tweak */
 @media (prefers-color-scheme: light) {
   nav a.router-link-exact-active {
     color: var(--color-clicked-link);

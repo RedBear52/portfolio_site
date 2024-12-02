@@ -36,21 +36,20 @@ const headingColorSecondary = () => {
 </script>
 
 <style scoped>
+.details {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: 0;
+  padding: 0 1rem;
+}
+
 .item {
   margin-top: 2rem;
   display: flex;
   position: relative;
-}
-
-.details {
-  flex: 1;
-  margin-left: 1rem;
-  font-size: 1rem;
-  line-height: 1.2;
-  padding-right: 1rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
 }
 
 h2 {
@@ -93,7 +92,6 @@ h2::after {
 
 .item:hover {
   cursor: pointer;
-  /* background-color: rgba(44, 62, 80, 0.2); */
   background-color: rgba(67, 221, 255, 0.2);
   transition: ease-out 1s;
 }
@@ -120,9 +118,6 @@ i:hover {
   transition: ease-in-out 0.3s;
 }
 
-.modal h2 {
-  font-size: 2rem;
-}
 
 i {
   top: calc(50% - 25px);
@@ -161,6 +156,10 @@ i {
   display: none;
 }
 
+.modal h2 {
+  font-size: 2rem;
+}
+
 @media (min-width: 1201px) {
   .item {
     margin-top: 0;
@@ -195,9 +194,10 @@ i {
 
 }
 
-.details {
-  margin-left: 0;
-  padding: 0 1rem;
+@media (prefers-color-scheme: light) and (min-width: 298px) and (max-width: 1200px) {
+  .item i {
+    color: var(--color-primary);
+  }
 }
 
 @media (max-width: 598px) {

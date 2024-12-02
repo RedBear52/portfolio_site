@@ -156,9 +156,6 @@ h3 {
 
 p {
   font-size: 1.1rem;
-}
-
-#optimizer {
   margin-bottom: 1rem;
 }
 
@@ -166,11 +163,6 @@ p {
   display: block;
   border-top: 1px solid var(--color-primary);
   overflow: scroll;
-}
-
-.modal h2 {
-  font-size: 2rem;
-  margin: 1rem 0;
 }
 
 .project p {
@@ -189,6 +181,11 @@ p {
   color: var(--color-primary);
 }
 
+.modal h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
 #flood-editions {
   background-color: rgba(240, 110, 128, 0.1);
 }
@@ -205,7 +202,7 @@ p {
   background-color: rgba(253, 254, 31, 0.1);
 }
 
-p {
+#optimizer {
   margin-bottom: 1rem;
 }
 </style>

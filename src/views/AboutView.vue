@@ -17,7 +17,6 @@
         More so, I learned that dogged persistence is the magical key that turns
         mere ideas into living/breathing things.
       </p>
-
       <br />
       <p>I love to learn-thru-play and build tools that feel good to use.</p>
     </div>
@@ -45,6 +44,7 @@ h1 {
   }
 }
 
+/* work-around media query fix for margins adjustments that were not applying on bottom of container */
 @media (min-width: 298px) and (max-width: 1200px) {
   .about-container {
     transform: translateY(-2%);
