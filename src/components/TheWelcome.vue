@@ -13,7 +13,7 @@
 
     <WelcomeItem @icon-click="showModal('toolbox')">
       <template #icon>
-        <i class="pi pi-wrench" @mouseover="showGlow"></i>
+        <i class="pi pi-wrench"></i>
       </template>
       <template #heading>Tool Box</template>
 
@@ -44,8 +44,7 @@
     </WelcomeItem>
 
     <WelcomeItem @icon-click="showModal('certifications')">
-      <template #icon>
-        <i class="pi pi-graduation-cap"></i>
+      <template #icon><i class="pi pi-graduation-cap"></i>
       </template>
       <template #heading>Certifications</template>
 
@@ -176,7 +175,7 @@
     <div v-if="modalContent === 'portfolio'">
       <MyProjectPortfolio />
     </div>
-      <div v-if="modalContent === 'hire'">
+    <div v-if="modalContent === 'hire'">
       <h2>Hire Me</h2>
       <p>
         If you'd like to retain my skills for your company or your next project,
@@ -244,10 +243,8 @@ const techTools = computed(() => [
 </script>
 
 <style scoped>
-
-
 .contact-link {
-  text-decoration: none ;
+  text-decoration: none;
 }
 
 .contact-link:hover {
@@ -376,8 +373,8 @@ p {
   }
 
   .modal .pi-check-square {
-  color: var(--color-blue-light-mode);
-}
+    color: var(--color-blue-light-mode);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -398,8 +395,7 @@ p {
   }
 
   .modal .pi-check-square {
-  color: var(--color-primary);
+    color: var(--color-primary);
+  }
 }
-}
-
 </style>

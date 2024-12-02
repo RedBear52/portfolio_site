@@ -93,7 +93,7 @@ h2::after {
 
 .item:hover {
   cursor: pointer;
-  background-color: rgba(44, 62, 80, 0.2);
+  /* background-color: rgba(44, 62, 80, 0.2); */
   background-color: rgba(67, 221, 255, 0.2);
   transition: ease-out 1s;
 }
@@ -110,12 +110,14 @@ i {
   width: 32px;
   height: 32px;
   color: var(--color-primary);
+  transition: ease-in-out 0.3s;
 }
 
 i:hover {
   background-color: var(--color-primary);
   color: var(--color-background);
   cursor: pointer;
+  transition: ease-in-out 0.3s;
 }
 
 .modal h2 {
@@ -207,6 +209,19 @@ i {
     margin-left: 0;
     padding-left: 0;
     top: 0;
+  }
+}
+
+/* Target Safari using a media query to mitigate font irregularity/component shifting during transitions */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .details {
+      font-size: 0.95rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }
 </style>

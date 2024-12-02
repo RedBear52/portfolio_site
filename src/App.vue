@@ -3,9 +3,9 @@
     <header>
       <div class="logo-container" @mouseover="showImage = true" @mouseleave="showImage = false">
         <img alt="coder logo" class="logo" src="@/assets/glowing_tarot_coder.webp" width="225px" />
-        <!-- <Transition> -->
-        <img v-if="showImage" class="logo-hovered" src="./assets/ryan_head.jpg" alt="photo image of ryan spearman" />
-        <!-- </Transition> -->
+        <transition name="ryan">
+          <img v-if="showImage" class="logo-hovered" src="./assets/ryan_head.jpg" alt="photo image of ryan spearman" />
+        </transition>
       </div>
 
       <div class="wrapper">
@@ -115,12 +115,26 @@ nav a:first-of-type {
 
 .fade-enter-from {
   opacity: 0;
-  transform: translateY(5px);
 }
 
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(5px);
+}
+
+.ryan-enter-active {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ryan-enter-from {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+.ryan-leave-to {
+  opacity: 0;
+  transform: translateX(10%);
 }
 
 @media (min-width: 1201px) {
