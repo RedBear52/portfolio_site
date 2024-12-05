@@ -4,7 +4,8 @@
       <div class="logo-container" @mouseover="showImage = true" @mouseleave="showImage = false">
         <img alt="coder logo" class="logo" src="@/assets/glowing_tarot_coder.webp" width="225px" />
         <transition name="ryan">
-          <img v-if="showImage" class="logo-hovered" src="./assets/ryan_head.jpg" alt="photo image of ryan spearman" />
+          <img v-if="showImage" class="logo-hovered" src="./assets/ryan_head.jpg" alt="photo image of ryan spearman"
+            height="90%" />
         </transition>
       </div>
 
@@ -127,7 +128,7 @@ nav a:first-of-type {
 
 .ryan-enter-from {
   opacity: 0;
-  transform: translateX(-10%);
+  transform: translateY(-10%);
 }
 
 .ryan-leave-to {

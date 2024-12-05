@@ -41,11 +41,10 @@ const sendEmail = async e => {
         message: message.value,
       },
     )
-    console.log(name.value, email.value, message.value)
     toast.success('Message sent successfully!')
     e.target.reset()
   } catch (error) {
-    console.log({ error })
+    console.error(error)
     toast.error('An error occurred. Please try again later.')
   }
 }

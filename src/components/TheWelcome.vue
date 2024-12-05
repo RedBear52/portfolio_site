@@ -49,7 +49,7 @@
       <template #heading>Certifications</template>
 
       <p class="exo-glyph">
-        My certifications were issued by
+        My certs were earned via
         <span class="emphatic-white">Accenture's Udacity Program</span> and
         include: <span class="emphasis">Intro to Programming</span>,
         <span class="emphasis">Intermediate Javascript</span>,
@@ -144,7 +144,7 @@
     <div v-if="modalContent === 'certifications'">
       <h2>Certifications</h2>
       <p>
-        My certifications were issued by
+        My certs were earned via
         <span class="emphasis">Accenture's Udacity Program</span>:
       </p>
       <ul>
@@ -212,7 +212,7 @@ onUnmounted(() => {
     .matchMedia('(prefers-color-scheme: dark)')
     .removeEventListener('change', updateDarkMode)
 })
-// /\ end of core code for dark mode logo fix  /\
+// /\ end of dark mode logo fix  /\
 
 const isModalVisible = ref(false)
 const modalContent = ref('')
@@ -359,6 +359,7 @@ p {
 }
 
 @media (prefers-color-scheme: light) {
+
   .emphasis,
   .emphasis-blue {
     color: black;
@@ -381,6 +382,7 @@ p {
 
 /* dark/light mode adjustments */
 @media (prefers-color-scheme: dark) {
+
   .emphasis,
   .emphasis-blue {
     color: var(--color-primary);
